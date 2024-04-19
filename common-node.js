@@ -109,8 +109,16 @@ const main = async function () {
       console.log(`config.json file does not exist`);
     }
 
+    if (!fs.existsSync('./genesis.json')) {
+      console.log(`genesis.json file does not exist`);
+    }
+
+    if (!fs.existsSync('./peers.json')) {
+      console.log(`peers.json file does not exist`);
+    }
+
     let config = await fs.readJson('./config.json');
-    let { app, tendermint, preMineAccounts, dataDir } = config;
+    let { app, tendermint, dataDir } = config;
     if (!dataDir) {
       dataDir = path.join(os.homedir(), 'chain-data');
     }
@@ -141,10 +149,11 @@ const main = async function () {
       console.log(`${stdout}${stderr}\n`);
     }
 
+    let nodeId;
     for (let i = 0; i < nodesCount; i++) {
       const nodeKey = await fs.readJSON(path.join(tempDir, `node${i}/${daemon}/config/node_key.json`));
-      const nodeId = privKeyToBurrowAddres(nodeKey.priv_key.value);
-      console.log(`====== you peer node info is ${nodeId}@YOU_IP:${tendermint.port['p2p.laddr']}, save it to peers.json for other nodes to join. ======`);
+      nodeId = privKeyToBurrowAddres(nodeKey.priv_key.value);
+      console.log(`====== You peer node info is ${nodeId}@YOU_IP:${tendermint.port['p2p.laddr']}, please copy and save it for other nodes to join and use. ======`);
 
       const keySeedPath = path.join(tempDir, `node${i}/${daemon}/key_seed.json`);
       let curKeySeed = await fs.readJSON(keySeedPath);
@@ -156,46 +165,9 @@ const main = async function () {
       await fs.outputJson(keySeedPath, curKeySeed, { spaces: 2 });
     }
 
-    const account = { '@type': '/ethermint.types.v1.EthAccount', base_account: { address: '', pub_key: null, account_number: '0', sequence: '0' }, code_hash: '0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470' };
     for (let i = 0; i < nodesCount; i++) {
-      let accounts = [];
-      let balances = [];
-      if (Array.isArray(preMineAccounts)) {
-        let duplicate = {};
-        for (const ac of preMineAccounts) {
-          let { address, amount } = ac;
-          if (ac.length == 64) {
-            const wallet = new Wallet(ac);
-            address = ethToBech32(wallet.address, app.prefix);
-          } else if (address.startsWith('0x')) {
-            address = ethToBech32(ac, app.prefix);
-          }
-          if (duplicate[address]) {
-            continue;
-          }
-          duplicate[address] = true;
-
-          accounts.push(Object.assign(JSON.parse(JSON.stringify(account)), { base_account: { address } }));
-          balances.push({ address, coins: app.denoms.map((denom) => ({ denom, amount })) });
-        }
-      }
-
       const genesisPath = path.join(tempDir, `node${i}/${daemon}/config/genesis.json`);
-      let genesis = await fs.readJSON(genesisPath);
-      let appState = genesis.app_state;
-      appState.auth.accounts.push(...accounts);
-      appState.bank.balances.push(...balances);
-
-      const genesisCfg = config.genesisCfg;
-      if (Array.isArray(genesisCfg)) {
-        for (const cfg of genesisCfg) {
-          eval('genesis.' + cfg);
-        }
-      }
-
-      // Use zero address to occupy the first account, Because of account_ Accounts with number 0 cannot send Cosmos transactions
-      appState.auth.accounts.unshift(Object.assign(JSON.parse(JSON.stringify(account)), { base_account: { address: ethToBech32('0x0000000000000000000000000000000000000000', app.prefix) } }));
-
+      const genesis = await fs.readJSON('./genesis.json');
       await fs.outputJson(genesisPath, genesis, { spaces: 2 });
     }
 
@@ -212,14 +184,9 @@ const main = async function () {
       data = await fs.readFile(configPath, 'utf8');
       data = updatePorts(data, tendermint.port, i);
       // replace persistent_peers
-      // let peers = [];
-      // const p2pPort = tendermint.port['p2p.laddr'];
-      // for (let j = 0; j < nodesCount && nodesCount > 1; j++) {
-      //   if (i != j) {
-      //     peers.push(`${nodeIds[j]}@127.0.0.1:${p2pPort + j}`);
-      //   }
-      // }
-      // tendermint.cfg['p2p.persistent_peers'] = `"${peers.join()}"`;
+      let peers = await fs.readJSON('./peers.json');
+      peers = peers.filter((peer) => peer.indexOf(nodeId) == -1);
+      tendermint.cfg['p2p.persistent_peers'] = `"${peers.join()}"`;
       data = updateCfg(data, tendermint.cfg);
       await fs.writeFile(configPath, data);
 
