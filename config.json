@@ -1,0 +1,61 @@
+{
+  "dataDir": "",
+  "app": {
+    "prefix": "mud",
+    "chain_name": "mud",
+    "chain_id": "mud_168168-1",
+    "denoms": [
+      "amud"
+    ],
+    "port": {
+      "api.address": 1317,
+      "rosetta.address": 8080,
+      "grpc.address": 9090,
+      "grpc-web.address": 7070,
+      "json-rpc.address": 8545,
+      "json-rpc.ws-address": 7545,
+      "json-rpc.metrics-address": 6065
+    },
+    "cfg": {
+      "minimum-gas-prices": "\"0amud\"",
+      "pruning": "\"nothing\"",
+      "api.swagger": "true",
+      "api.enabled-unsafe-cors": "true",
+      "rosetta.enable": "false",
+      "rosetta.denom-to-suggest": "\"0amud\"",
+      "grpc.enable": "true",
+      "grpc-web.enable": "true",
+      "grpc-web.enable-unsafe-cors": "true",
+      "json-rpc.enable": "true",
+      "json-rpc.api": "\"eth,txpool,personal,net,debug,web3\""
+    }
+  },
+  "tendermint": {
+    "port": {
+      "rpc.laddr": 26657,
+      "rpc.pprof_laddr": 5050,
+      "p2p.laddr": 10000,
+      "instrumentation.prometheus_listen_addr": 16660
+    },
+    "cfg": {
+      "consensus.timeout_commit": "\"1s\"",
+      "rpc.cors_allowed_origins": "[\"*\"]",
+      "instrumentation.prometheus": "true",
+      "p2p.allow_duplicate_ip": "true",
+      "p2p.seeds": "\"\""
+    }
+  },
+  "preMineAccounts": [
+    {
+      "address": "mud1qqqqhe5pnaq5qq39wqkn957aydnrm45sfpsqkx",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "mud1zyg3qtwny9stqe8j55fvmmm5hldk48uksuh4ux",
+      "amount": "10000000000000000000000000"
+    }
+  ],
+  "genesisCfg": [
+    "app_state.gov.voting_params.voting_period='600s'"
+  ]
+}

@@ -1,0 +1,12 @@
+# Node.js
+**/node_modules
+
+
+# OpenZeppelin contracts
+contracts/@openzeppelin/*
+nodes/
+temp/
+mud/
+mudd
+package-lock.json
+peers.json
