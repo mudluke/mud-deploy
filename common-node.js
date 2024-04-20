@@ -69,7 +69,7 @@ const updatePorts = (data, ports, index) => {
         const oldPort = line.split(':').pop().split(`"`)[0];
         const newPort = String(port + index);
         // console.log(line, oldPort, newPort);
-        lines[i] = line.replace(oldPort, newPort).replace('localhost', '0.0.0.0').replace('127.0.0.1', '0.0.0.0');
+        lines[i] = line.replace(oldPort, newPort);
         break;
       }
     }

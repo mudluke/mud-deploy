@@ -39,10 +39,19 @@ export const main = async () => {
       key = data.key;
     }
 
-    const rpc = '127.0.0.1:8545';
+    const rpc = 'http://127.0.0.1:8545';
     const provider = new ethers.JsonRpcProvider(rpc);
 
     // input params
+
+    const privateKey = '54a2d3ac86cd0ce2c3af91a930d9a77199c658edf9af8341991e3622f2d9b521';
+    const wallet = new ethers.Wallet(privateKey, provider);
+    const description = ['join node', 'identity', 'http://cosmos.lucq.fun', 'security contract', 'It is my details'];
+    const commission = ['100000000000000000', '100000000000000000', '100000000000000000'];
+    const minSelfDelegation = '1';
+    const pubkey = key;
+    const value = '100000000000000000000';
+
     const stakingAddress = '0x0000000000000000000000000000000000001003';
     const abi = [
       {
@@ -129,15 +138,6 @@ export const main = async () => {
         type: 'function',
       },
     ];
-
-    const privateKey = '54a2d3ac86cd0ce2c3af91a930d9a77199c658edf9af8341991e3622f2d9b521';
-    const wallet = new ethers.Wallet(privateKey, provider);
-    const description = ['join node', 'identity', 'http://cosmos.lucq.fun', 'security contract', 'It is my details'];
-    const commission = ['100000000000000000', '100000000000000000', '100000000000000000'];
-    const minSelfDelegation = '1';
-    const pubkey = key;
-    const value = '100000000000000000000';
-
     const staking = new ethers.Contract(stakingAddress, abi, wallet);
     const tx = await staking.createValidator(description, commission, minSelfDelegation, pubkey, value);
     const receipt = await tx.wait();

@@ -11,9 +11,9 @@
       "api.address": 1317,
       "rosetta.address": 8080,
       "grpc.address": 9090,
-      "grpc-web.address": 7070,
+      "grpc-web.address": 9091,
       "json-rpc.address": 8545,
-      "json-rpc.ws-address": 7545,
+      "json-rpc.ws-address": 8546,
       "json-rpc.metrics-address": 6065
     },
     "cfg": {
@@ -33,12 +33,12 @@
   "tendermint": {
     "port": {
       "rpc.laddr": 26657,
-      "rpc.pprof_laddr": 5050,
-      "p2p.laddr": 10000,
-      "instrumentation.prometheus_listen_addr": 16660
+      "rpc.pprof_laddr": 6060,
+      "p2p.laddr": 26656,
+      "instrumentation.prometheus_listen_addr": 26660
     },
     "cfg": {
-      "consensus.timeout_commit": "\"1s\"",
+      "consensus.timeout_commit": "\"5s\"",
       "rpc.cors_allowed_origins": "[\"*\"]",
       "instrumentation.prometheus": "true",
       "p2p.allow_duplicate_ip": "true",
