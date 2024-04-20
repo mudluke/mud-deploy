@@ -26,7 +26,7 @@ let argv = yargs(hideBin(process.argv))
   .option('s', {
     alias: 'start',
     demandOption: false,
-    default: false,
+    default: true,
     describe: 'Whether after initialize immediate start',
     type: 'bool',
   })

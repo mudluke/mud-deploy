@@ -1,5 +1,5 @@
 {
-  "dataDir": "",
+  "dataDir": "/home/ubuntu/chain-data",
   "app": {
     "prefix": "mud",
     "chain_name": "mud",
