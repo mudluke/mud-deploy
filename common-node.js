@@ -142,7 +142,7 @@ const main = async function () {
       return;
     }
 
-    await execPromis('chmod 777 mudd', { cwd: curDir });
+    await execPromis('chmod 700 mudd', { cwd: curDir });
 
     console.log('Start cleaning up folder nodes');
     await fs.remove(tempDir);
