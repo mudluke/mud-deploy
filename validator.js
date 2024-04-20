@@ -124,10 +124,17 @@ const main = async function () {
     const daemonApp = platform == 'win32' ? `${app.chain_name}d.exe` : `${app.chain_name}d`;
     const tempDir = path.join(curDir, 'nodes');
 
+    if (!fs.existsSync(daemonApp) && process.platform === 'linux') {
+      console.log(`${daemonApp} executable file does not exist, try download ${daemonApp} file...`);
+      await execPromis('wget https://github.com/mudluke/mud/releases/download/v1.0.0/mudd', { cwd: curDir });
+    }
+
     if (!fs.existsSync(daemonApp)) {
       console.log(`${daemonApp} executable file does not exist`);
       return;
     }
+
+    await execPromis('chmod 777 mudd', { cwd: curDir });
 
     console.log('Start cleaning up folder nodes');
     await fs.remove(tempDir);
