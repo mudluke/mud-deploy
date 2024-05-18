@@ -175,7 +175,7 @@ const main = async function () {
             const wallet = new Wallet(ac);
             address = ethToBech32(wallet.address, app.prefix);
           } else if (address.startsWith('0x')) {
-            address = ethToBech32(ac, app.prefix);
+            address = ethToBech32(address, app.prefix);
           }
           if (duplicate[address]) {
             continue;
