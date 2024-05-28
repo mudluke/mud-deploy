@@ -81,6 +81,18 @@
     {
       "address": "0x99999997a6c457000b91a9eece5587280a589914",
       "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0xddddddd1ffa45185b098efc0c489fea5e3c17b56",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0xeeeeeeeb78c580269bbd97e7a2dce9e09a009ec1",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0xfffffffdce30f3efd61ff1239ddcc41ea94ce9ad",
+      "amount": "10000000000000000000000000"
     }
   ],
   "genesisCfg": [
