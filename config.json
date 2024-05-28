@@ -3,7 +3,7 @@
   "app": {
     "prefix": "mud",
     "chain_name": "mud",
-    "chain_id": "mud_168168-1",
+    "chain_id": "mud_168167-1",
     "denoms": [
       "amud"
     ],
@@ -47,15 +47,47 @@
   },
   "preMineAccounts": [
     {
-      "address": "mud1qqqqhe5pnaq5qq39wqkn957aydnrm45sfpsqkx",
+      "address": "0x0000000bA7906929D5629151777BC2321346828D",
       "amount": "10000000000000000000000000"
     },
     {
-      "address": "mud1zyg3qtwny9stqe8j55fvmmm5hldk48uksuh4ux",
+      "address": "0x11111110e374Ee448e7e90169344Cd7Cbfd56905",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x11111110e374Ee448e7e90169344Cd7Cbfd56905",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x2222222011aEe130c9876D66D2F793200a5954b5",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x5555555d038b0869a47ff506b6be93fd80078cf1",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x6666666af646b40470e2b0dd693c9dad87e5300b",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x777777750dc686252c8743c444c9f411eb99c4c8",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x8888888066a0e635323ac9d67fd27c33318bd506",
+      "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x99999997a6c457000b91a9eece5587280a589914",
       "amount": "10000000000000000000000000"
     }
   ],
   "genesisCfg": [
-    "app_state.gov.voting_params.voting_period='600s'"
+    "consensus_params.block.max_gas='40000000'",
+    "app_state.gov.voting_params.voting_period='1800s'",
+    "app_state.feemarket.params.no_base_fee=false",
+    "app_state.feemarket.params.base_fee='10000000000'",
+    "app_state.feemarket.params.min_gas_price='10000000000.000000000000000000'"
   ]
 }
