@@ -3,7 +3,7 @@
   "app": {
     "prefix": "mud",
     "chain_name": "mud",
-    "chain_id": "mud_168167-1",
+    "chain_id": "mud_168169-1",
     "denoms": [
       "amud"
     ],
@@ -18,7 +18,7 @@
     },
     "cfg": {
       "minimum-gas-prices": "\"0amud\"",
-      "pruning": "\"nothing\"",
+      "pruning": "\"default\"",
       "api.swagger": "true",
       "api.enabled-unsafe-cors": "true",
       "rosetta.enable": "false",
