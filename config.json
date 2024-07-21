@@ -55,10 +55,6 @@
       "amount": "10000000000000000000000000"
     },
     {
-      "address": "0x11111110e374Ee448e7e90169344Cd7Cbfd56905",
-      "amount": "10000000000000000000000000"
-    },
-    {
       "address": "0x2222222011aEe130c9876D66D2F793200a5954b5",
       "amount": "10000000000000000000000000"
     },
@@ -97,7 +93,8 @@
   ],
   "genesisCfg": [
     "consensus_params.block.max_gas='40000000'",
-    "app_state.gov.voting_params.voting_period='1800s'",
+    "app_state.gov.voting_params.voting_period='600s'",
+    "app_state.staking.params.unbonding_time='600s'",
     "app_state.feemarket.params.no_base_fee=false",
     "app_state.feemarket.params.base_fee='10000000000'",
     "app_state.feemarket.params.min_gas_price='10000000000.000000000000000000'"

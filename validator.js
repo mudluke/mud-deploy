@@ -1,4 +1,4 @@
-import { HDNodeWallet, Wallet } from 'ethers';
+import { HDNodeWallet, Wallet, parseEther } from 'ethers';
 import crypto from 'crypto';
 import { ethToBech32 } from '@quarix/address-converter';
 import { exec } from 'child_process';
@@ -115,6 +115,19 @@ const main = async function () {
       dataDir = path.join(os.homedir(), 'chain-data');
     }
 
+    const lines = await fs.readFile('./MUD.csv');
+    const items = lines.toString().split('\n');
+    for (const item of items) {
+      const [address, amount, type] = item.split(',');
+      // console.log({ address, amount, type }); //0x35E53d176723b7516C559634181bcEad354c93F1,386575192.004596,contract
+      if (type == 'wallet') {
+        preMineAccounts.push({
+          address,
+          amount: parseEther(amount).toString(),
+        });
+      }
+    }
+
     if (app.chain_id) {
       clientCfg = clientCfg.replaceAll(chainId, app.chain_id);
       chainId = app.chain_id;
@@ -142,7 +155,9 @@ const main = async function () {
     console.log('Folder nodes has been cleaned up');
 
     {
-      const initFiles = `${platform !== 'win32' ? './' : ''}${daemonApp} testnet init-files --v 1 --output-dir ./nodes --chain-id ${chainId} --keyring-backend test`;
+      const initFiles = `${
+        platform !== 'win32' ? './' : ''
+      }${daemonApp} testnet init-files --v 1 --output-dir ./nodes --chain-id ${chainId} --keyring-backend test`;
       console.log(`Exec cmd: ${initFiles}`);
       const { stdout, stderr } = await execPromis(initFiles, { cwd: curDir });
       console.log(`${stdout}${stderr}\n`);
@@ -151,7 +166,9 @@ const main = async function () {
     for (let i = 0; i < nodesCount; i++) {
       const nodeKey = await fs.readJSON(path.join(tempDir, `node${i}/${daemon}/config/node_key.json`));
       const nodeId = privKeyToBurrowAddres(nodeKey.priv_key.value);
-      console.log(`====== you peer node info is ${nodeId}@YOU_IP:${tendermint.port['p2p.laddr']}, save it to peers.json for other nodes to join. ======`);
+      console.log(
+        `====== you peer node info is ${nodeId}@YOU_IP:${tendermint.port['p2p.laddr']}, save it to peers.json for other nodes to join. ======`
+      );
 
       const keySeedPath = path.join(tempDir, `node${i}/${daemon}/key_seed.json`);
       let curKeySeed = await fs.readJSON(keySeedPath);
@@ -163,7 +180,11 @@ const main = async function () {
       await fs.outputJson(keySeedPath, curKeySeed, { spaces: 2 });
     }
 
-    const account = { '@type': '/ethermint.types.v1.EthAccount', base_account: { address: '', pub_key: null, account_number: '0', sequence: '0' }, code_hash: '0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470' };
+    const account = {
+      '@type': '/ethermint.types.v1.EthAccount',
+      base_account: { address: '', pub_key: null, account_number: '0', sequence: '0' },
+      code_hash: '0xc5d2460186f7233c927e7db2dcc703c0e500b653ca82273b7bfad8045d85a470',
+    };
     for (let i = 0; i < nodesCount; i++) {
       let accounts = [];
       let balances = [];
@@ -201,7 +222,11 @@ const main = async function () {
       }
 
       // Use zero address to occupy the first account, Because of account_ Accounts with number 0 cannot send Cosmos transactions
-      appState.auth.accounts.unshift(Object.assign(JSON.parse(JSON.stringify(account)), { base_account: { address: ethToBech32('0x0000000000000000000000000000000000000000', app.prefix) } }));
+      appState.auth.accounts.unshift(
+        Object.assign(JSON.parse(JSON.stringify(account)), {
+          base_account: { address: ethToBech32('0x0000000000000000000000000000000000000000', app.prefix) },
+        })
+      );
 
       await fs.outputJson(genesisPath, genesis, { spaces: 2 });
     }
@@ -257,7 +282,9 @@ if [[ -n $pid ]]; then kill -15 $pid; fi`;
     if (start) {
       console.log(`starting the validator node`);
       await execPromis(startPath, { cwd: dataDir });
-      console.log(`start node end, please use cmd:     curl http://127.0.0.1:${tendermint.port['rpc.laddr']}/block | jq     check chain status`);
+      console.log(
+        `start node end, please use cmd:     curl http://127.0.0.1:${tendermint.port['rpc.laddr']}/block | jq     check chain status`
+      );
     } else {
       console.log(`please go to the directory ${dataDir} and run the script ./start.sh to start the validator node.`);
     }
