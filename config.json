@@ -93,6 +93,10 @@
     {
       "address": "0xfffffffdce30f3efd61ff1239ddcc41ea94ce9ad",
       "amount": "10000000000000000000000000"
+    },
+    {
+      "address": "0x6d731a5ed145Ab6d2e88bbD4dC6CaA888f8b1F40",
+      "amount": "200000000000000000000000000"
     }
   ],
   "genesisCfg": [

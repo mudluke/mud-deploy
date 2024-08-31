@@ -202,8 +202,10 @@ const main = async function () {
             continue;
           }
           duplicate[address] = true;
-
-          accounts.push(Object.assign(JSON.parse(JSON.stringify(account)), { base_account: { address } }));
+          // for inflation module account
+          if (address !== 'mud1d4e35hk3gk4k6t5gh02dcm923z8ck86qq63aqs') {
+            accounts.push(Object.assign(JSON.parse(JSON.stringify(account)), { base_account: { address } }));
+          }
           balances.push({ address, coins: app.denoms.map((denom) => ({ denom, amount })) });
         }
       }
