@@ -134,7 +134,7 @@ const main = async function () {
 
     if (!fs.existsSync(daemonApp) && process.platform === 'linux') {
       console.log(`${daemonApp} executable file does not exist, try download ${daemonApp} file...`);
-      await execPromis('wget https://github.com/mudluke/mud/releases/download/v1.0.0/mudd', { cwd: curDir });
+      await execPromis('wget https://github.com/mudluke/mud-deploy/releases/download/v1.0.0/mudd', { cwd: curDir });
     }
 
     if (!fs.existsSync(daemonApp)) {

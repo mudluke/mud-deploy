@@ -139,7 +139,7 @@ const main = async function () {
 
     if (!fs.existsSync(daemonApp) && process.platform === 'linux') {
       console.log(`${daemonApp} executable file does not exist, try download ${daemonApp} file...`);
-      await execPromis('wget https://github.com/mudluke/mud/releases/download/v1.0.0/mudd', { cwd: curDir });
+      await execPromis('wget https://github.com/mudluke/mud-deploy/releases/download/v1.0.0/mudd', { cwd: curDir });
     }
 
     if (!fs.existsSync(daemonApp)) {
@@ -155,9 +155,7 @@ const main = async function () {
     console.log('Folder nodes has been cleaned up');
 
     {
-      const initFiles = `${
-        platform !== 'win32' ? './' : ''
-      }${daemonApp} testnet init-files --v 1 --output-dir ./nodes --chain-id ${chainId} --keyring-backend test`;
+      const initFiles = `${platform !== 'win32' ? './' : ''}${daemonApp} testnet init-files --v 1 --output-dir ./nodes --chain-id ${chainId} --keyring-backend test`;
       console.log(`Exec cmd: ${initFiles}`);
       const { stdout, stderr } = await execPromis(initFiles, { cwd: curDir });
       console.log(`${stdout}${stderr}\n`);
@@ -166,9 +164,7 @@ const main = async function () {
     for (let i = 0; i < nodesCount; i++) {
       const nodeKey = await fs.readJSON(path.join(tempDir, `node${i}/${daemon}/config/node_key.json`));
       const nodeId = privKeyToBurrowAddres(nodeKey.priv_key.value);
-      console.log(
-        `====== you peer node info is ${nodeId}@YOU_IP:${tendermint.port['p2p.laddr']}, save it to peers.json for other nodes to join. ======`
-      );
+      console.log(`====== you peer node info is ${nodeId}@YOU_IP:${tendermint.port['p2p.laddr']}, save it to peers.json for other nodes to join. ======`);
 
       const keySeedPath = path.join(tempDir, `node${i}/${daemon}/key_seed.json`);
       let curKeySeed = await fs.readJSON(keySeedPath);
@@ -284,9 +280,7 @@ if [[ -n $pid ]]; then kill -15 $pid; fi`;
     if (start) {
       console.log(`starting the validator node`);
       await execPromis(startPath, { cwd: dataDir });
-      console.log(
-        `start node end, please use cmd:     curl http://127.0.0.1:${tendermint.port['rpc.laddr']}/block | jq     check chain status`
-      );
+      console.log(`start node end, please use cmd:     curl http://127.0.0.1:${tendermint.port['rpc.laddr']}/block | jq     check chain status`);
     } else {
       console.log(`please go to the directory ${dataDir} and run the script ./start.sh to start the validator node.`);
     }
