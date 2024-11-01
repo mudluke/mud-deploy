@@ -9,4 +9,3 @@ temp/
 mud/
 mudd
 package-lock.json
-peers.json
