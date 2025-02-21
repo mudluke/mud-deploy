@@ -29,7 +29,7 @@ const contracts = [
   '0xd1b47490209ccb7a806e8a45d9479490c040abf4',
 ];
 
-const fetchAllHolders = async () => {
+const main1 = async () => {
   let allHolders = [];
   try {
     for (let page = 1; page <= totalPage; page++) {
@@ -58,14 +58,32 @@ const fetchAllHolders = async () => {
   } catch (error) {
     console.error('Error:', error.message);
   }
+  fs.writeFileSync('./balances-origin.json', JSON.stringify(allHolders, null, 2));
 };
 
-// 执行查询
-// fetchAllHolders().then((holders) => {
-//   fs.writeFileSync('./balances-origin.json', JSON.stringify(holders, null, 2));
-// });
+async function main2() {
+  const holders = await fs.readJson('./balances-origin.json');
+  const holdersObject = {};
+  let totalBalance = 0n;
+  for (const holder of holders) {
+    const address = holder.address.toLowerCase();
+    const amount = ethers.parseEther(holder.amount);
+    if (holdersObject[address]) {
+      holdersObject[address].amount += amount;
+    } else {
+      holdersObject[address] = { address, amount };
+    }
+    totalBalance += amount;
+  }
 
-async function main() {
+  const balances = [];
+  for (const address in holdersObject) {
+    balances.push({ address, amount: ethers.formatEther(holdersObject[address].amount) });
+  }
+  console.log(`total balance: ${ethers.formatEther(totalBalance)}, total holders: ${holders.length}`);
+}
+
+async function main3() {
   const items = await fs.readJson('./balances-readable.json');
   const balancesObject = {};
   const balances = [];
@@ -77,7 +95,7 @@ async function main() {
     const amount = ethers.parseEther(item.amount);
 
     if (balancesObject[address]) {
-      console.log(`${address} already exists`);
+      console.log(`${address} already exists`, item.amount, ethers.formatEther(balancesObject[address]));
       balancesObject[address] += amount;
     } else {
       balancesObject[address] = amount;
@@ -108,7 +126,7 @@ async function main() {
   await fs.writeJson('./balances.json', balances, { spaces: 2 });
 }
 
-main()
+main2()
   .then(() => process.exit(0))
   .catch((error) => {
     console.error(error);
