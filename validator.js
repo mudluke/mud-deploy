@@ -115,17 +115,13 @@ const main = async function () {
       dataDir = path.join(os.homedir(), 'chain-data');
     }
 
-    const lines = await fs.readFile('./MUD.csv');
-    const items = lines.toString().split('\n');
+    const items = await fs.readJson('./balances.json');
     for (const item of items) {
-      const [address, amount, type] = item.split(',');
-      // console.log({ address, amount, type }); //0x35E53d176723b7516C559634181bcEad354c93F1,386575192.004596,contract
-      if (type == 'wallet') {
-        preMineAccounts.push({
-          address,
-          amount: parseEther(amount).toString(),
-        });
-      }
+      const { address, amount } = item;
+      preMineAccounts.push({
+        address,
+        amount: parseEther(amount).toString(),
+      });
     }
 
     if (app.chain_id) {

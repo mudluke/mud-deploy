@@ -4,9 +4,7 @@
     "prefix": "mud",
     "chain_name": "mud",
     "chain_id": "mud_168169-1",
-    "denoms": [
-      "amud"
-    ],
+    "denoms": ["amud"],
     "port": {
       "api.address": 1317,
       "rosetta.address": 8080,
@@ -45,65 +43,12 @@
       "p2p.seeds": "\"\""
     }
   },
-  "preMineAccounts": [
-    {
-      "address": "0x0000000bA7906929D5629151777BC2321346828D",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x0000000fedf0d1a68294c1dafe3cbcb295a988f5",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x11111110e374Ee448e7e90169344Cd7Cbfd56905",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x2222222011aEe130c9876D66D2F793200a5954b5",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x5555555d038b0869a47ff506b6be93fd80078cf1",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x6666666af646b40470e2b0dd693c9dad87e5300b",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x777777750dc686252c8743c444c9f411eb99c4c8",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x8888888066a0e635323ac9d67fd27c33318bd506",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x99999997a6c457000b91a9eece5587280a589914",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0xddddddd1ffa45185b098efc0c489fea5e3c17b56",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0xeeeeeeeb78c580269bbd97e7a2dce9e09a009ec1",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0xfffffffdce30f3efd61ff1239ddcc41ea94ce9ad",
-      "amount": "10000000000000000000000000"
-    },
-    {
-      "address": "0x6d731a5ed145Ab6d2e88bbD4dC6CaA888f8b1F40",
-      "amount": "200000000000000000000000000"
-    }
-  ],
+  "preMineAccounts": [],
   "genesisCfg": [
     "consensus_params.block.max_gas='40000000'",
     "app_state.gov.deposit_params.min_deposit[0].amount='100000000000000000000'",
-    "app_state.gov.voting_params.voting_period='259200s'",
-    "app_state.staking.params.unbonding_time='259200s'",
+    "app_state.gov.voting_params.voting_period='604800s'",
+    "app_state.staking.params.unbonding_time='1814400s'",
     "app_state.slashing.params.signed_blocks_window='90000'",
     "app_state.feemarket.params.no_base_fee=false",
     "app_state.feemarket.params.base_fee='10000000000'",
