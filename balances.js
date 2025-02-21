@@ -69,18 +69,27 @@ async function main2() {
     const address = holder.address.toLowerCase();
     const amount = ethers.parseEther(holder.amount);
     if (holdersObject[address]) {
-      holdersObject[address].amount += amount;
+      console.log(`${address} already exists`, holder.amount, ethers.formatEther(holdersObject[address].amount));
     } else {
       holdersObject[address] = { address, amount };
+      if (holder.contract) {
+        holdersObject[address].contract = true;
+      }
+      totalBalance += amount;
     }
-    totalBalance += amount;
   }
 
   const balances = [];
   for (const address in holdersObject) {
-    balances.push({ address, amount: ethers.formatEther(holdersObject[address].amount) });
+    let amount = ethers.formatEther(holdersObject[address].amount);
+    if (amount.endsWith('.0')) {
+      amount = amount.slice(0, -2);
+    }
+    balances.push({ address, amount, contract: holdersObject[address].contract });
   }
-  console.log(`total balance: ${ethers.formatEther(totalBalance)}, total holders: ${holders.length}`);
+  console.log(`total balance: ${ethers.formatEther(totalBalance)}, total holders: ${balances.length}`);
+  balances.sort((a, b) => parseFloat(b.amount) - parseFloat(a.amount));
+  fs.writeFileSync('./balances-origin.json', JSON.stringify(balances, null, 2));
 }
 
 async function main3() {
