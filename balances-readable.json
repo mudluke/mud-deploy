@@ -1,5 +1,25 @@
 [
   {
+    "address": "0x0000000081f6d3ed9c5a1b1d03879c10fde7d148",
+    "amount": "101",
+    "remark": "这是用于创建验证节点1的地址"
+  },
+  {
+    "address": "0x1111111fea0acb00d192caf807b215c68cb4c9b5",
+    "amount": "101",
+    "remark": "这是用于创建验证节点2的地址"
+  },
+  {
+    "address": "0x2222222cc5ab7c5f0e9e76ab4cf6e9a5281f262e",
+    "amount": "101",
+    "remark": "这是用于创建验证节点3的地址"
+  },
+  {
+    "address": "0x0000000000000000000000000000000000000000",
+    "amount": "11741249.717006",
+    "remark": "这是要凑够8.5亿MUD的地址"
+  },
+  {
     "address": "0x35e53d176723b7516c559634181bcead354c93f1",
     "amount": "344758968.724298",
     "distribute": [
