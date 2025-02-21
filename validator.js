@@ -160,7 +160,7 @@ const main = async function () {
     for (let i = 0; i < nodesCount; i++) {
       const nodeKey = await fs.readJSON(path.join(tempDir, `node${i}/${daemon}/config/node_key.json`));
       const nodeId = privKeyToBurrowAddres(nodeKey.priv_key.value);
-      const ip = await execPromis('curl ifconfig.me');
+      const ip = await execPromis('curl -4 ifconfig.me');
       console.log(`ip: ${ip.stdout}`);
       console.log(`====== you peer node info is ${nodeId}@${ip.stdout}:${tendermint.port['p2p.laddr']}, save it to peers.json for other nodes to join. ======`);
 

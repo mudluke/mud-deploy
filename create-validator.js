@@ -46,8 +46,8 @@ export const main = async () => {
 
     const privateKey = '54a2d3ac86cd0ce2c3af91a930d9a77199c658edf9af8341991e3622f2d9b521';
     const wallet = new ethers.Wallet(privateKey, provider);
-    const description = ['join node', 'identity', 'http://cosmos.lucq.fun', 'security contract', 'It is my details'];
-    const commission = ['100000000000000000', '100000000000000000', '100000000000000000'];
+    const description = ['join node', '', 'https://mud.network', '', ''];
+    const commission = ['100000000000000000', '200000000000000000', '100000000000000000'];
     const minSelfDelegation = '1';
     const pubkey = key;
     const value = '100000000000000000000';
