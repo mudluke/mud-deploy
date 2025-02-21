@@ -46,10 +46,21 @@
   "preMineAccounts": [],
   "genesisCfg": [
     "consensus_params.block.max_gas='40000000'",
+
     "app_state.gov.deposit_params.min_deposit[0].amount='100000000000000000000'",
     "app_state.gov.voting_params.voting_period='604800s'",
+
     "app_state.staking.params.unbonding_time='1814400s'",
+
+    "app_state.distribution.params.community_tax='0.000000000000000000'",
+    "app_state.distribution.params.base_proposer_reward='0.000000000000000000'",
+    "app_state.distribution.params.bonus_proposer_reward='0.000000000000000000'",
+
+    "app_state.inflation.params.inflation_distribution.staking_rewards='0.900000000000000000'",
+    "app_state.inflation.params.inflation_distribution.community_pool='0.100000000000000000'",
+
     "app_state.slashing.params.signed_blocks_window='90000'",
+
     "app_state.feemarket.params.no_base_fee=false",
     "app_state.feemarket.params.base_fee='10000000000'",
     "app_state.feemarket.params.min_gas_price='10000000000.000000000000000000'"
