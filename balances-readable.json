@@ -2,22 +2,64 @@
   {
     "address": "0x35e53d176723b7516c559634181bcead354c93f1",
     "amount": "344758968.724298",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x6d731a5ed145Ab6d2e88bbD4dC6CaA888f8b1F40",
+        "amount": "200000000",
+        "remark": "这是用于质押挖矿的合约地址"
+      },
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "25000000",
+        "remark": "这是用于做流动性奖励的地址"
+      },
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "11068016.430771",
+        "remark": "这是用于分发给未提取奖励的用户"
+      }
+    ],
+    "contract": true,
+    "remark": "这是矿池pool合约地址，其中2亿枚拿出来质押挖矿。2500万枚拿出来做流动性。还有 11068016.430771 枚需要分发给未提取奖励的用户，详细分发数据见pool.json文件"
   },
   {
     "address": "0xf1ff4342ecd100213ab3fbbdbc13ef84c77ef38a",
     "amount": "231575955.114565",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "231575955.114565",
+        "remark": "存入该地址，然后根据mining.json文件进行分发"
+      }
+    ],
+    "contract": true,
+    "remark": "这是抵押挖矿mining合约地址"
   },
   {
     "address": "0x23fa4b73f80fbb1563792662c434d307bf49b224",
     "amount": "160000000",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "160000000",
+        "remark": "存入该地址，然后等团队分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
+      }
+    ],
+    "contract": true,
+    "remark": "这是团队奖励合约地址"
   },
   {
     "address": "0xf628f33a9174dde7100249a84800ee849139b1a2",
     "amount": "148127153.462787",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "148127153.462787",
+        "remark": "存入该地址，然后等AB轮分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
+      }
+    ],
+    "contract": true,
+    "remark": "这是AB轮合约地址"
   },
   {
     "address": "0x98fdf99287613d95e72c656bf02ce017ce964b63",
@@ -26,7 +68,15 @@
   {
     "address": "0xb78d353042596448ef067dad0f92eaa9373fda7d",
     "amount": "20254038.280046",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "20254038.280046",
+        "remark": "存入该地址，然后等天使轮分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
+      }
+    ],
+    "contract": true,
+    "remark": "这是天使轮合约地址"
   },
   {
     "address": "0x37b9ac06c83fc490648650b14293286f468d2c82",
@@ -207,7 +257,15 @@
   {
     "address": "0x1b933598d91c104fdab8826cc5c944c81fb4a67d",
     "amount": "8715.72",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000000000000000000000000000000000000",
+        "amount": "8715.72",
+        "remark": "项目方提供地址用于存起来分发给相关人员"
+      }
+    ],
+    "contract": true,
+    "remark": "这是一个多签合约地址"
   },
   {
     "address": "0x1fcef78804a79afa461032336a45b2efa736688b",
@@ -1748,7 +1806,14 @@
   {
     "address": "0x5338968f9646e4a865d76e07c2a6e340dd3ac462",
     "amount": "197.503723",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "197.503723"
+      }
+    ],
+    "contract": true,
+    "remark": "这是UniswapV3Pool合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0xa2be4737f8be44da7d7eba40d7789b00acb3679c",
@@ -1993,7 +2058,14 @@
   {
     "address": "0x07964f135f276412b3182a3b2407b8dd45000000",
     "amount": "115.016451",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "115.016451"
+      }
+    ],
+    "contract": true,
+    "remark": "这是TransitSwapRouterV5合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0x9d06275c6a2799c906b5815a22f7f6d57e74a8da",
@@ -2482,7 +2554,14 @@
   {
     "address": "0x23b5aa437cfdaf03235d78961e032dba549dfc06",
     "amount": "34.120397",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "34.120397"
+      }
+    ],
+    "contract": true,
+    "remark": "这是FeeCollector合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0x32bd2f007912604275123c2cf84befae3a2c6cc3",
@@ -2735,7 +2814,14 @@
   {
     "address": "0xf6eac236757e82d6772e8bd02d36a0c791d78c51",
     "amount": "14",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "14"
+      }
+    ],
+    "contract": true,
+    "remark": "这是MetaUserDAOToken合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0xbb924c4166be06c069d4a7c923a9f62551c139f6",
@@ -4244,7 +4330,14 @@
   {
     "address": "0xb01f8f528702d411d24c9bb8cc0e2fff779ec013",
     "amount": "0.666869",
-    "contract": true
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "0.666869"
+      }
+    ],
+    "contract": true,
+    "remark": "这是一个未知合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0xc2aa284355bb781cef8f0c9a51be1a511430acfe",
