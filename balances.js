@@ -135,7 +135,7 @@ async function main3() {
   await fs.writeJson('./balances.json', balances, { spaces: 2 });
 }
 
-main2()
+main3()
   .then(() => process.exit(0))
   .catch((error) => {
     console.error(error);
