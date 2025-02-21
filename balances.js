@@ -1,5 +1,6 @@
 import axios from 'axios';
-import fs from 'fs';
+import { ethers } from 'ethers';
+import fs from 'fs-extra';
 const API_KEY = 'd6e66291-8dbc-45af-90d6-61742b520eb8';
 const API_URL = 'https://www.oklink.com/api/v5/explorer/token/position-list';
 
@@ -60,6 +61,56 @@ const fetchAllHolders = async () => {
 };
 
 // 执行查询
-fetchAllHolders().then((holders) => {
-  fs.writeFileSync('./balances.json', JSON.stringify(holders, null, 2));
-});
+// fetchAllHolders().then((holders) => {
+//   fs.writeFileSync('./balances-origin.json', JSON.stringify(holders, null, 2));
+// });
+
+async function main() {
+  const items = await fs.readJson('./balances-readable.json');
+  const balancesObject = {};
+  const balances = [];
+  let totalBalance = 0n;
+  let originTotalBalance = 0n;
+
+  const dealBalance = (item) => {
+    const address = item.address.toLowerCase();
+    const amount = ethers.parseEther(item.amount);
+
+    if (balancesObject[address]) {
+      console.log(`${address} already exists`);
+      balancesObject[address] += amount;
+    } else {
+      balancesObject[address] = amount;
+    }
+
+    totalBalance += amount;
+  };
+
+  for (const item of items) {
+    const { address, amount, distribute } = item;
+    originTotalBalance += ethers.parseEther(amount);
+    if (Array.isArray(distribute)) {
+      for (const d of distribute) {
+        const { address, amount } = d;
+        dealBalance({ address, amount });
+      }
+    } else {
+      dealBalance({ address, amount });
+    }
+  }
+  for (const address in balancesObject) {
+    balances.push({ address, amount: ethers.formatEther(balancesObject[address]) });
+  }
+
+  console.log(`origin users: ${items.length}, final users: ${balances.length}`);
+  console.log(`origin total balance: ${ethers.formatEther(originTotalBalance)}, final total balance: ${ethers.formatEther(totalBalance)}`);
+  balances.sort((a, b) => parseFloat(b.amount) - parseFloat(a.amount));
+  await fs.writeJson('./balances.json', balances, { spaces: 2 });
+}
+
+main()
+  .then(() => process.exit(0))
+  .catch((error) => {
+    console.error(error);
+    process.exit(1);
+  });
