@@ -13,7 +13,8 @@ async function main1() {
   let duplicate = {};
 
   // 处理每一行
-  for (const line of lines) {
+  for (let line of lines) {
+    line = line.toLocaleLowerCase();
     // 处理地址行
     if (line.startsWith('0x')) {
       addresses.push(line);
