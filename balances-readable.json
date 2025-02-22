@@ -15,8 +15,8 @@
     "remark": "这是用于创建验证节点3的地址"
   },
   {
-    "address": "0x75499bc6D449079824fe88e84fE636BBA429fC4f",
-    "amount": "11741049.617006",
+    "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+    "amount": "11741049.717006",
     "remark": "这是要凑够8.5亿MUD的地址"
   },
   {
@@ -29,12 +29,12 @@
         "remark": "这是用于质押挖矿的合约地址"
       },
       {
-        "address": "0xbd8F4042e5d7457a0DE0ca1235876691D56Df785",
-        "amount": "25000000.1",
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "25000000",
         "remark": "这是用于做流动性奖励的地址"
       },
       {
-        "address": "0x84c64059feaBbfD98B3a4BFc0CD3F9B0bc77a9c0",
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
         "amount": "11068016.430771",
         "remark": "这是用于分发给未提取奖励的用户"
       }
@@ -47,7 +47,7 @@
     "amount": "231575955.114565",
     "distribute": [
       {
-        "address": "0x6119f73A6b515B18FCA48910bBBeAA7DBb3E8370",
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
         "amount": "231575955.114565",
         "remark": "存入该地址，然后根据mining.json文件进行分发"
       }
@@ -60,7 +60,7 @@
     "amount": "160000000",
     "distribute": [
       {
-        "address": "0xE4352E98d54a5f23bB3F2B037E00A79Ed3702fc7",
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
         "amount": "160000000",
         "remark": "存入该地址，然后等团队分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
       }
@@ -73,7 +73,7 @@
     "amount": "148127153.462787",
     "distribute": [
       {
-        "address": "0xAFed6038D59c54A46F0bFae6549545fac5559815",
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
         "amount": "148127153.462787",
         "remark": "存入该地址，然后等AB轮分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
       }
@@ -90,7 +90,7 @@
     "amount": "20254038.280046",
     "distribute": [
       {
-        "address": "0x1fA504303625Aeb2BF3ee67D2d2D2fD02F34Bb08",
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
         "amount": "20254038.280046",
         "remark": "存入该地址，然后等天使轮分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
       }
@@ -279,7 +279,7 @@
     "amount": "8715.72",
     "distribute": [
       {
-        "address": "0x20e9E56021D84727032FCc4B00d35709De7D59EE",
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
         "amount": "8715.72",
         "remark": "项目方提供地址用于存起来分发给相关人员"
       }
