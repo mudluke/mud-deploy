@@ -9,7 +9,6 @@ async function main() {
   const lines = content.split('\n');
 
   let addresses = [];
-  let targetAddress = '';
 
   // 处理每一行
   for (const line of lines) {
