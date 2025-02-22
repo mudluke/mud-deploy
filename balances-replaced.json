@@ -1,15 +1,102 @@
 [
   {
-    "address": "0x0000000000000000000000000000000000000000",
-    "amount": "607774928.725175"
+    "address": "0x0000000081f6d3ed9c5a1b1d03879c10fde7d148",
+    "amount": "101",
+    "remark": "这是用于创建验证节点1的地址"
   },
   {
-    "address": "0x6d731a5ed145ab6d2e88bbd4dc6caa888f8b1f40",
-    "amount": "200000000.0"
+    "address": "0x1111111fea0acb00d192caf807b215c68cb4c9b5",
+    "amount": "101",
+    "remark": "这是用于创建验证节点2的地址"
+  },
+  {
+    "address": "0x2222222cc5ab7c5f0e9e76ab4cf6e9a5281f262e",
+    "amount": "101",
+    "remark": "这是用于创建验证节点3的地址"
+  },
+  {
+    "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+    "amount": "11741049.717006",
+    "remark": "这是要凑够8.5亿MUD的地址"
+  },
+  {
+    "address": "0x35e53d176723b7516c559634181bcead354c93f1",
+    "amount": "344758968.724298",
+    "distribute": [
+      {
+        "address": "0x6d731a5ed145ab6d2e88bbd4dc6caa888f8b1f40",
+        "amount": "200000000",
+        "remark": "这是用于质押挖矿的合约地址"
+      },
+      {
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "25000000",
+        "remark": "这是用于做流动性奖励的地址"
+      },
+      {
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "11068016.430771",
+        "remark": "这是用于分发给未提取奖励的用户"
+      }
+    ],
+    "contract": true,
+    "remark": "这是矿池pool合约地址，其中2亿枚拿出来质押挖矿。2500万枚拿出来做流动性。还有 11068016.430771 枚需要分发给未提取奖励的用户，详细分发数据见pool.json文件"
+  },
+  {
+    "address": "0xf1ff4342ecd100213ab3fbbdbc13ef84c77ef38a",
+    "amount": "231575955.114565",
+    "distribute": [
+      {
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "231575955.114565",
+        "remark": "存入该地址，然后根据mining.json文件进行分发"
+      }
+    ],
+    "contract": true,
+    "remark": "这是抵押挖矿mining合约地址"
+  },
+  {
+    "address": "0x23fa4b73f80fbb1563792662c434d307bf49b224",
+    "amount": "160000000",
+    "distribute": [
+      {
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "160000000",
+        "remark": "存入该地址，然后等团队分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
+      }
+    ],
+    "contract": true,
+    "remark": "这是团队奖励合约地址"
+  },
+  {
+    "address": "0xf628f33a9174dde7100249a84800ee849139b1a2",
+    "amount": "148127153.462787",
+    "distribute": [
+      {
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "148127153.462787",
+        "remark": "存入该地址，然后等AB轮分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
+      }
+    ],
+    "contract": true,
+    "remark": "这是AB轮合约地址"
   },
   {
     "address": "0x98fdf99287613d95e72c656bf02ce017ce964b63",
     "amount": "39753058.9"
+  },
+  {
+    "address": "0xb78d353042596448ef067dad0f92eaa9373fda7d",
+    "amount": "20254038.280046",
+    "distribute": [
+      {
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "20254038.280046",
+        "remark": "存入该地址，然后等天使轮分配合约开发完毕，再把这些代币打入合约地址里面进行释放"
+      }
+    ],
+    "contract": true,
+    "remark": "这是天使轮合约地址"
   },
   {
     "address": "0x37b9ac06c83fc490648650b14293286f468d2c82",
@@ -41,7 +128,14 @@
   },
   {
     "address": "0x28741df43387f7bd7707ba0415731a7e93b4a784",
-    "amount": "48822.911349"
+    "amount": "48822.911349",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "48822.911349"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x4f0cece6b608c1a51b5b0a73194b973de3e40d48",
@@ -57,7 +151,14 @@
   },
   {
     "address": "0x0480eaab70ef9760fad97f10340598489eba3151",
-    "amount": "25732.0"
+    "amount": "25732",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "25732"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x8f266ed56480533ea46aedaf908d518e5ceec81a",
@@ -69,7 +170,7 @@
   },
   {
     "address": "0x101c2e7e55e71f986bede15daa922cbd4797f8dd",
-    "amount": "21465.0"
+    "amount": "21465"
   },
   {
     "address": "0xf75dfe2fc71a94548a72e8c454bd66a203f9dbc9",
@@ -81,11 +182,18 @@
   },
   {
     "address": "0x5d47c11913203db165c231cb3f7e87b72de903a2",
-    "amount": "20504.494645"
+    "amount": "20504.494645",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "20504.494645"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x76e3fe58ae251a567eaff790813e4ce8a8ffed13",
-    "amount": "20000.0"
+    "amount": "20000"
   },
   {
     "address": "0xc345e17da4781839ebcc32b8ef62c82c99a268ff",
@@ -121,7 +229,14 @@
   },
   {
     "address": "0xb9b28e2288f0d42ceb059a9de8da84a35267c330",
-    "amount": "13370.968734"
+    "amount": "13370.968734",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "13370.968734"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xf9ee3bf4fa5e84db2376ccdf6caad7cc4b383de2",
@@ -137,7 +252,7 @@
   },
   {
     "address": "0xfdf588906270a6b5d93f6c3496099160a9ab177c",
-    "amount": "11736.0"
+    "amount": "11736"
   },
   {
     "address": "0x893d61beafa9abf0d991c8f0bdaff6ea843d3583",
@@ -181,11 +296,24 @@
   },
   {
     "address": "0xf19962fa0bf5b14504cc9a22e4bbbb0a8fdec32e",
-    "amount": "8930.0"
+    "amount": "8930"
   },
   {
     "address": "0x7f3e4ba6d61ebd99f6585a39601baf6dcd9ea2cc",
     "amount": "8805.349193"
+  },
+  {
+    "address": "0x1b933598d91c104fdab8826cc5c944c81fb4a67d",
+    "amount": "8715.72",
+    "distribute": [
+      {
+        "address": "0x75499bc6d449079824fe88e84fe636bba429fc4f",
+        "amount": "8715.72",
+        "remark": "项目方提供地址用于存起来分发给相关人员"
+      }
+    ],
+    "contract": true,
+    "remark": "这是一个多签合约地址"
   },
   {
     "address": "0x1fcef78804a79afa461032336a45b2efa736688b",
@@ -209,7 +337,7 @@
   },
   {
     "address": "0x384ab593f3069780f1222db1d0a49c62da890bea",
-    "amount": "8222.0"
+    "amount": "8222"
   },
   {
     "address": "0xfc8f9194f4b0f8007ec81e6d9d424562ee3163a5",
@@ -261,7 +389,7 @@
   },
   {
     "address": "0x1ea47ea9d8baccc89f892410744894d754fc2a69",
-    "amount": "6656.0"
+    "amount": "6656"
   },
   {
     "address": "0x8f0be04106ac2b40bebdd5ab0b447f7fce6b94e8",
@@ -269,7 +397,14 @@
   },
   {
     "address": "0xae96728d781406c3704ea046aa5f15661bd81a09",
-    "amount": "6566.48"
+    "amount": "6566.48",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "6566.48"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xf7afda6edb51c6b71dbfa187e4a5ef051d45d4f7",
@@ -301,15 +436,29 @@
   },
   {
     "address": "0x30c60f23e212bc9877aa93ce1d5184ac1985d53f",
-    "amount": "6260.0"
+    "amount": "6260"
   },
   {
     "address": "0x832e4e8b261acf90b7f0b718a576707b49b1f963",
-    "amount": "5925.76"
+    "amount": "5925.76",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "5925.76"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xe2846863628ba558f5a1b529277e3ff342fa21e7",
-    "amount": "5925.76"
+    "amount": "5925.76",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "5925.76"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xf5dd11cd516d003b3dec3f2058ef9d6c03930cac",
@@ -325,7 +474,14 @@
   },
   {
     "address": "0x0b51cff5880040bacb9e4374874df90ad4becfe6",
-    "amount": "5851.688"
+    "amount": "5851.688",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "5851.688"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x4a7ffa1e937573db98bb62bfdf63d03a5627a409",
@@ -353,7 +509,14 @@
   },
   {
     "address": "0x39813f29e8bf77bf23b2220ad1dd5281744d617f",
-    "amount": "5104.559793"
+    "amount": "5104.559793",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "5104.559793"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x63b31098dbaa5dd92e69b79f0c5ae38894a18400",
@@ -377,7 +540,14 @@
   },
   {
     "address": "0xca2becec61d3c73b26ce4f7bc02ac095bf2d7164",
-    "amount": "4777.644"
+    "amount": "4777.644",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "4777.644"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x19f7f0745a1d825e7d1bcfacaec77464f942eaae",
@@ -389,7 +559,14 @@
   },
   {
     "address": "0x7093afb1f6d26abec71d90b8f11c678254658b74",
-    "amount": "4555.428"
+    "amount": "4555.428",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "4555.428"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xa00cec87f7fd2abfa28c1cc9e8741d7fa77f949c",
@@ -421,15 +598,36 @@
   },
   {
     "address": "0x235809aab4315d15cb261389584a7d33739349c2",
-    "amount": "4073.96"
+    "amount": "4073.96",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "4073.96"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xd1cf493912664fe834ee9dbbe777dbdd4343ca3d",
-    "amount": "3999.888"
+    "amount": "3999.888",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "3999.888"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x8aa8e726098051a3840bfc915efe7330f48bc4ca",
-    "amount": "3925.76"
+    "amount": "3925.76",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "3925.76"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x70525740cdb92163a67ac02fffc5a6c956c63a33",
@@ -485,7 +683,14 @@
   },
   {
     "address": "0x9b89fa9636a53a5f5462b76ee03111fb83c90a67",
-    "amount": "3296.204"
+    "amount": "3296.204",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "3296.204"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x96c625162f4109dd63652cd6131ed8d873266320",
@@ -493,7 +698,14 @@
   },
   {
     "address": "0xb3622cf7234b51c0a37bb4ce2ae15cc1f00fd130",
-    "amount": "3200.0"
+    "amount": "3200",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "3200"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xbc759f22ab704a1b634c81e281adc872863a72eb",
@@ -505,7 +717,14 @@
   },
   {
     "address": "0xb207ce4bbe48b46185e34935f9c82a5b464144ba",
-    "amount": "3000.0"
+    "amount": "3000",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "3000"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xd377c25caeb8c137c625d7d39c938c3b2dc81f9a",
@@ -517,7 +736,14 @@
   },
   {
     "address": "0x498f614b228d460a16a71c76e44d66a64554e9b4",
-    "amount": "2896.0"
+    "amount": "2896",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2896"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x17e13274cc8314da8891847a9232931f475e7025",
@@ -545,7 +771,14 @@
   },
   {
     "address": "0x6d42d4b6439485990041251d53dbb65ab7bf8a01",
-    "amount": "2674.591614"
+    "amount": "2674.591614",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2674.591614"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xafebfbcba79a1073a617e110b675f4bc4b6daf42",
@@ -581,7 +814,7 @@
   },
   {
     "address": "0x8385a509c0f69976e72bbe5dc10d6432bac87913",
-    "amount": "2450.0"
+    "amount": "2450"
   },
   {
     "address": "0x88040a0347640f755eafdeec4a72482ea12fde3c",
@@ -593,7 +826,14 @@
   },
   {
     "address": "0x2faaade212063b4398c357cbde11ac20ad4d147b",
-    "amount": "2344.543858"
+    "amount": "2344.543858",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2344.543858"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x3a1566995c80e1ff742c5da561f20e6ce0509f68",
@@ -605,11 +845,25 @@
   },
   {
     "address": "0x268ef44d2dcd6eafa33f8465ccdc0c9e47e86016",
-    "amount": "2255.1"
+    "amount": "2255.1",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2255.1"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xbcbc662928c5d68479f93f32996ac749604427dd",
-    "amount": "2185.124"
+    "amount": "2185.124",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2185.124"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x6ea3ebc45108e9b7d662becb61a03574cd84e02e",
@@ -617,7 +871,7 @@
   },
   {
     "address": "0x354675a32ea622bb8233e8e8539456ad1a5ea855",
-    "amount": "2137.0"
+    "amount": "2137"
   },
   {
     "address": "0x7cf64083db5965c756a635903c99fc9426df880d",
@@ -641,15 +895,22 @@
   },
   {
     "address": "0x226e52eef7b03a76a66a484da181e871ec6ddda6",
-    "amount": "2050.0"
+    "amount": "2050"
   },
   {
     "address": "0xf9f82f6465cba71f7750ca076933eefc9fdbf6db",
-    "amount": "2000.0"
+    "amount": "2000",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2000"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xe2ddbf3d9c08b2f245b5f1e055406a62c2666ebe",
-    "amount": "2000.0"
+    "amount": "2000"
   },
   {
     "address": "0xe9ea17f445f6d3421d8d63f42b9a95ca7cc54c38",
@@ -657,11 +918,18 @@
   },
   {
     "address": "0xc76c60da3e4c2ca337d097734f34272c48176c7f",
-    "amount": "1993.0"
+    "amount": "1993"
   },
   {
     "address": "0x7423a73a4f674c326c7fa560f08aa29393dce9b5",
-    "amount": "1987.69023"
+    "amount": "1987.69023",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1987.69023"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x2275fef799778e66122f23b046ece30afe64e035",
@@ -677,7 +945,14 @@
   },
   {
     "address": "0x990954493b371972915ecbb09e2ae012a6e5d697",
-    "amount": "1888.96"
+    "amount": "1888.96",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1888.96"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x0f5a481ce1280e2ae201c65db2bbe0d3d9a9e1d4",
@@ -709,7 +984,7 @@
   },
   {
     "address": "0xc4798671c4eabed630ff16fec881d5c1483018f9",
-    "amount": "1664.0"
+    "amount": "1664"
   },
   {
     "address": "0xb9270a7fe4b9b81e2e4c14184ca30a8c70463c53",
@@ -717,7 +992,7 @@
   },
   {
     "address": "0x077ae4b65937a0350279899714dd222393212052",
-    "amount": "1621.0"
+    "amount": "1621"
   },
   {
     "address": "0x05e7dfc251bfc71bdc189a12f52ece3d768076d1",
@@ -729,7 +1004,7 @@
   },
   {
     "address": "0x1ab059d592462b20cc105b533686951f6ff54fc0",
-    "amount": "1583.0"
+    "amount": "1583"
   },
   {
     "address": "0x2b620d16c1e4bac3b2bf220a56119b75b0b5eeab",
@@ -741,7 +1016,14 @@
   },
   {
     "address": "0x3b8f4dc5716d5e6989529f1b3f0c9ae97ac8e7f0",
-    "amount": "1548.088"
+    "amount": "1548.088",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1548.088"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x069417592c197f9b1ed4efa812705cbba4d4279b",
@@ -749,7 +1031,14 @@
   },
   {
     "address": "0x11edc70abca1b0422657252128f01b50180d0c6c",
-    "amount": "1507.896351"
+    "amount": "1507.896351",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1507.896351"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x6df513884bbec6f81ea2601035384eecf0c1c291",
@@ -805,7 +1094,14 @@
   },
   {
     "address": "0x7d4520ebec3bd67b54a88868e6b2086ff471d4b9",
-    "amount": "1333.24"
+    "amount": "1333.24",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1333.24"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xdea9cb9028f2228c1f06c50a3dd4ba653b5c89ba",
@@ -813,7 +1109,14 @@
   },
   {
     "address": "0xce9b7fdfaa7fffc7d796395e167f633a81f5a77d",
-    "amount": "1293.873703"
+    "amount": "1293.873703",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1293.873703"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xae6ac77d06e0146501ddd0ab508dcc3ab3a9a528",
@@ -849,7 +1152,14 @@
   },
   {
     "address": "0x89d6af3b96b7069e95ac114adb77e5108948df8a",
-    "amount": "1250.0"
+    "amount": "1250",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1250"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xe7667cf6c4cea4e02eeb80da839c295a2c152847",
@@ -865,7 +1175,14 @@
   },
   {
     "address": "0x1637f769915e0a64ee89ec990402e8f4fe98c59d",
-    "amount": "1233.282794"
+    "amount": "1233.282794",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1233.282794"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xd7a674972789d4dd049153517ad1921cd6666958",
@@ -981,11 +1298,18 @@
   },
   {
     "address": "0xf8bb6f2249e5db2bf678eaa5c769f8d4acd0ea8e",
-    "amount": "1000.329734"
+    "amount": "1000.329734",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1000.329734"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x6d13d5fe51a85ee4775dd6fbf42ee1e4d5875ff9",
-    "amount": "1000.0"
+    "amount": "1000"
   },
   {
     "address": "0xc30c173654b3a1ce6460a339bb25b55ee09aabeb",
@@ -1089,7 +1413,14 @@
   },
   {
     "address": "0x90429772ec448fb9f6f61d001f5eb3024e0bb700",
-    "amount": "756.0"
+    "amount": "756",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "756"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xdf07798dde401a935997415be72c7aca133f73db",
@@ -1097,7 +1428,7 @@
   },
   {
     "address": "0x139d0dd15181e0ab4f286381dbc879ed829accf2",
-    "amount": "750.0"
+    "amount": "750"
   },
   {
     "address": "0x7912fd731c6b576df41ddabed37daa3a40c692fb",
@@ -1105,7 +1436,7 @@
   },
   {
     "address": "0x2b0c3e59fff6f3cd32cca15201e9d1af1f3a37c8",
-    "amount": "724.0"
+    "amount": "724"
   },
   {
     "address": "0xea8329f3ed6ad2ed20f9dac4b9a2685507f2b01d",
@@ -1141,7 +1472,7 @@
   },
   {
     "address": "0xbf13f6985a8ec1078e905f7a84b4416168710da0",
-    "amount": "666.0"
+    "amount": "666"
   },
   {
     "address": "0x938d8f039d0f6482668be26defc0da10dd73facf",
@@ -1149,7 +1480,14 @@
   },
   {
     "address": "0xc6e714c67a27c72013bbd388db076549ae724b7f",
-    "amount": "659.888"
+    "amount": "659.888",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "659.888"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x2d6b8e0eccd6a41addb69a193d7e8558f6dbf55a",
@@ -1189,7 +1527,7 @@
   },
   {
     "address": "0x721f52970b972ce24a7ebf8b8367da92dd9d3e3f",
-    "amount": "595.0"
+    "amount": "595"
   },
   {
     "address": "0x803801def77bc8652326021a2c979e472492a7db",
@@ -1233,7 +1571,14 @@
   },
   {
     "address": "0x99882b9cfe72bc0ead33525cce6d3146f6c43019",
-    "amount": "552.675563"
+    "amount": "552.675563",
+    "distribute": [
+      {
+        "address": "0xdb0624b7a2b8bbd4cf79c33c68f34994effe46fa",
+        "amount": "552.675563"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x915fd3421c20caf1842223489adc658288ac225d",
@@ -1317,7 +1662,7 @@
   },
   {
     "address": "0xc6afd99f0165b7592c6b5d6cb8164190268fb32d",
-    "amount": "500.0"
+    "amount": "500"
   },
   {
     "address": "0x32d5bd2a345a529eb692e60e6a389ef01464e463",
@@ -1361,7 +1706,14 @@
   },
   {
     "address": "0x265bc284b76d8147a9073c18f3d27c2755409e4f",
-    "amount": "452.33097"
+    "amount": "452.33097",
+    "distribute": [
+      {
+        "address": "0x33af5520c842537f6bfb19a2b34935990b167276",
+        "amount": "452.33097"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x584339903a5a8d5510530f8f94917c2d75fdd72e",
@@ -1397,7 +1749,14 @@
   },
   {
     "address": "0x4ce2be8fa447efaf6dfa802d86a9e84b3487658d",
-    "amount": "414.764"
+    "amount": "414.764",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "414.764"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x959377e9506266f573c714b03150ca2565ea93b2",
@@ -1405,7 +1764,14 @@
   },
   {
     "address": "0xabefee4e7760ca351c00bf001b04f9d42e64d36e",
-    "amount": "404.2048"
+    "amount": "404.2048",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "404.2048"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xbe15655aaf07e21c6d7cfca66b7074c70fb01aa9",
@@ -1413,11 +1779,25 @@
   },
   {
     "address": "0xdb18ce329f7858468abbcbd1d6acc11876bf7e32",
-    "amount": "401.611487"
+    "amount": "401.611487",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "401.611487"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x082cd74e421d0e40d1d3cba333682db7a6f97a41",
-    "amount": "396.824995"
+    "amount": "396.824995",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "396.824995"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x9f47111143f046dad7b3a005c848992bb42013c0",
@@ -1425,7 +1805,7 @@
   },
   {
     "address": "0xc9da54edd0e26b19ae675409a6d5e642cd3f4494",
-    "amount": "394.0"
+    "amount": "394"
   },
   {
     "address": "0x1bcaf1b25cf4f5e63a0ee17fdd036072123de2e1",
@@ -1441,7 +1821,14 @@
   },
   {
     "address": "0xc0b35a272d73f84d0d12d14cab090017f0326ad7",
-    "amount": "381.78821"
+    "amount": "381.78821",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "381.78821"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xcb3d0c5a3cf6be2594678162a4a3b0fa20dd10cb",
@@ -1464,12 +1851,8 @@
     "amount": "362.306243"
   },
   {
-    "address": "0x0000000ba7906929d5629151777bc2321346828d",
-    "amount": "361.30744"
-  },
-  {
     "address": "0x4fffbb6219005e77352454ef1e4adec7aa6ba600",
-    "amount": "360.0"
+    "amount": "360"
   },
   {
     "address": "0x8022823ac2079868193b15c68dfd60dbeaae2040",
@@ -1557,11 +1940,11 @@
   },
   {
     "address": "0x806adccbda502740844ef677f20658c476c98657",
-    "amount": "300.0"
+    "amount": "300"
   },
   {
     "address": "0x55399ed3fe5d0a42d03dc815249835aed81bca54",
-    "amount": "300.0"
+    "amount": "300"
   },
   {
     "address": "0x704dd52134a4024242292ba4dbcd271fe0be87ec",
@@ -1593,11 +1976,11 @@
   },
   {
     "address": "0x7bf2adf14e91164a99a948a5d72b08f83dc65a31",
-    "amount": "270.0"
+    "amount": "270"
   },
   {
     "address": "0xe44e1e90c8dc18bbfc13a7d02106510d22370469",
-    "amount": "270.0"
+    "amount": "270"
   },
   {
     "address": "0x1e01d63b17b88411344c8af0bc8f44dd16ad4288",
@@ -1641,7 +2024,7 @@
   },
   {
     "address": "0x65aacb5508471c0c1c4a8b6fe191ef523bf67ba2",
-    "amount": "250.0"
+    "amount": "250"
   },
   {
     "address": "0x7d49e51f529500c75de5154e3341546d2cc068e1",
@@ -1665,7 +2048,7 @@
   },
   {
     "address": "0x73dd0353027a036ae69d83493bc54eec7f31deb6",
-    "amount": "240.0"
+    "amount": "240"
   },
   {
     "address": "0x884b54df3efb94bd85ab1aa94464f4894013588d",
@@ -1673,7 +2056,7 @@
   },
   {
     "address": "0x032a3f7ce1f3b213424b35784b3088af27bbcafb",
-    "amount": "234.0"
+    "amount": "234"
   },
   {
     "address": "0x03bdcfc93e5b8311fb0dfd13307472d052eaa072",
@@ -1693,7 +2076,14 @@
   },
   {
     "address": "0x1916b616a5b9950bbb5ea1add7fad5fe098d089e",
-    "amount": "217.01424"
+    "amount": "217.01424",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "217.01424"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x0785b224a7ccc67048418306d9810d829e756afa",
@@ -1721,11 +2111,23 @@
   },
   {
     "address": "0xd14a71afe2405babc37c4726bab6db1c572c6a81",
-    "amount": "200.0"
+    "amount": "200"
   },
   {
     "address": "0x5e5a7ebdcc20b695f42a22fa668b3c921e25b70f",
     "amount": "198.221263"
+  },
+  {
+    "address": "0x5338968f9646e4a865d76e07c2a6e340dd3ac462",
+    "amount": "197.503723",
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "197.503723"
+      }
+    ],
+    "contract": true,
+    "remark": "这是UniswapV3Pool合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0xa2be4737f8be44da7d7eba40d7789b00acb3679c",
@@ -1749,7 +2151,14 @@
   },
   {
     "address": "0xfbec59bf3b5aca960a8ad2279d6e11f180982b98",
-    "amount": "190.26663"
+    "amount": "190.26663",
+    "distribute": [
+      {
+        "address": "0xeac4d13ccf30a16c81dd4fb046003c25735f69be",
+        "amount": "190.26663"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xb23370729be3ba9ddfda8a262c53e016534f7852",
@@ -1769,7 +2178,7 @@
   },
   {
     "address": "0x468e1886b57f32078ca98db65574826460554ece",
-    "amount": "188.0"
+    "amount": "188"
   },
   {
     "address": "0xf7993583828f2db484881344358c35453bc23916",
@@ -1789,7 +2198,7 @@
   },
   {
     "address": "0x4c90552c10967851a225707bb9678a82eaa280ba",
-    "amount": "186.0"
+    "amount": "186"
   },
   {
     "address": "0xdea5b3c6289eab2a5a35b517990119bb4b029707",
@@ -1809,7 +2218,7 @@
   },
   {
     "address": "0xeb7b13e3044fb5707a028e10259e6417a04bef91",
-    "amount": "181.0"
+    "amount": "181"
   },
   {
     "address": "0x6e0b0d52f96fb72ea72f7b5332ec36bb672f6971",
@@ -1877,7 +2286,14 @@
   },
   {
     "address": "0xbda19ed75c587e29c84e0be2f185927dd75f87dc",
-    "amount": "149.548803"
+    "amount": "149.548803",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "149.548803"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x26782d565a60e59b17b6ca62b087553682ebdeac",
@@ -1901,7 +2317,14 @@
   },
   {
     "address": "0x34e4c0160b87ebab74f4d550ac8fdb790c96a814",
-    "amount": "137.897267"
+    "amount": "137.897267",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "137.897267"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x9af6d2eadf924ac5d5728ba04febe474ac17b36b",
@@ -1961,11 +2384,23 @@
   },
   {
     "address": "0x93fc566224c93470c9e95b3a0bc69e9988839cc4",
-    "amount": "117.0"
+    "amount": "117"
   },
   {
     "address": "0xe1218f375937dbb1c5a11454168f739e6017ef0e",
     "amount": "115.819459"
+  },
+  {
+    "address": "0x07964f135f276412b3182a3b2407b8dd45000000",
+    "amount": "115.016451",
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "115.016451"
+      }
+    ],
+    "contract": true,
+    "remark": "这是TransitSwapRouterV5合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0x9d06275c6a2799c906b5815a22f7f6d57e74a8da",
@@ -2024,32 +2459,27 @@
     "amount": "102.870466"
   },
   {
-    "address": "0x0000000081f6d3ed9c5a1b1d03879c10fde7d148",
-    "amount": "101.0"
-  },
-  {
-    "address": "0x1111111fea0acb00d192caf807b215c68cb4c9b5",
-    "amount": "101.0"
-  },
-  {
-    "address": "0x2222222cc5ab7c5f0e9e76ab4cf6e9a5281f262e",
-    "amount": "101.0"
-  },
-  {
     "address": "0x03aec3201ec4a3d38393b8806ee1a222809186a8",
     "amount": "100.887959"
   },
   {
     "address": "0xffad0e221c942f7b28e66e1d64fae0247d5bd431",
-    "amount": "100.0"
+    "amount": "100"
   },
   {
     "address": "0x5358f74722c2d56fcf42cc39fe1e5c3c19d5ec8b",
-    "amount": "100.0"
+    "amount": "100"
   },
   {
     "address": "0xe911b1db87fc2e483fbd43e925cd882e79de6d14",
-    "amount": "100.0"
+    "amount": "100",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "100"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x9affb3740f0cd5ce946e7003626152ed0427efa8",
@@ -2061,7 +2491,7 @@
   },
   {
     "address": "0x537abd7058f2a0179b79875d64072de03851ce16",
-    "amount": "99.0"
+    "amount": "99"
   },
   {
     "address": "0x09ee9c2b97f1ad8b9300df1e478c8a1c1d4296a8",
@@ -2089,7 +2519,14 @@
   },
   {
     "address": "0xf8e467f3418ce70098a6b2fb2542fbb4309b2f87",
-    "amount": "93.908436"
+    "amount": "93.908436",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "93.908436"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x4a2ec7432178e498fcb09ce1e58720e0f224a4c7",
@@ -2113,11 +2550,11 @@
   },
   {
     "address": "0x5c210ba20c02e3b448e84b6eb712fa627d8e0d97",
-    "amount": "90.0"
+    "amount": "90"
   },
   {
     "address": "0xe88093dd39c526f41069d0d1a1da22052261fe19",
-    "amount": "90.0"
+    "amount": "90"
   },
   {
     "address": "0x4882d7cfa241e7226cfd358d181e1cb04ea570ea",
@@ -2137,7 +2574,7 @@
   },
   {
     "address": "0xb8c96210455bf05c9d5236ba6126a6a392dd3fbf",
-    "amount": "84.0"
+    "amount": "84"
   },
   {
     "address": "0xb3e843a8df7d2a8400ba40474a38b5b8f3ff8c96",
@@ -2197,11 +2634,11 @@
   },
   {
     "address": "0x1396eef9700fd543afdad4199a08d0515240cf7c",
-    "amount": "70.0"
+    "amount": "70"
   },
   {
     "address": "0x3ff6c35bb9e63a79f260eca61fc6493a0f222ff6",
-    "amount": "69.0"
+    "amount": "69"
   },
   {
     "address": "0x4e1866b74b6d8ae963b305458bec1e92a4480ab3",
@@ -2209,7 +2646,7 @@
   },
   {
     "address": "0x88ea700604a0ad9a6e18f546de6dbd2c6366ce1c",
-    "amount": "68.0"
+    "amount": "68"
   },
   {
     "address": "0xbdc13e9882929d8c5a006d70f47e50d8ad5ff34b",
@@ -2229,7 +2666,7 @@
   },
   {
     "address": "0x303ef23a34e8483062088c098191f6d0e65d7086",
-    "amount": "64.0"
+    "amount": "64"
   },
   {
     "address": "0xa362a8e927a184c8b145fc422131d86c45fa8b59",
@@ -2269,11 +2706,11 @@
   },
   {
     "address": "0x3ce9f87583a311992677272067804a833fcccab3",
-    "amount": "60.0"
+    "amount": "60"
   },
   {
     "address": "0x23b5dd18d4f9b36c09b1f1b530d4413125316681",
-    "amount": "60.0"
+    "amount": "60"
   },
   {
     "address": "0xc80e0ae34f389d5432e51c59c7d6835a86a4ffaf",
@@ -2293,7 +2730,7 @@
   },
   {
     "address": "0x863eb6eb2b99c507fb5716b9774ea3297b6855c4",
-    "amount": "57.0"
+    "amount": "57"
   },
   {
     "address": "0xd6b8486efba98d1cc5e2068eef63baee0d94eba4",
@@ -2337,7 +2774,7 @@
   },
   {
     "address": "0x5f00a1c20f354aa5e5871f97bdc24e266b58c7ac",
-    "amount": "52.0"
+    "amount": "52"
   },
   {
     "address": "0x24b6adf873b85aa6cbcec5a797d422a119968e29",
@@ -2349,7 +2786,14 @@
   },
   {
     "address": "0xe6837a62607898529297bdc893c2ea9e05a70fbf",
-    "amount": "51.0"
+    "amount": "51",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "51"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x5c042f1aba9d1007d8459053c711952377153d68",
@@ -2357,19 +2801,26 @@
   },
   {
     "address": "0xa2ecd65fa4b93e0faf12c34a496f5e42bfe8267f",
-    "amount": "50.119588"
+    "amount": "50.119588",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "50.119588"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x4cd3e86ade32ede8556c4703231c1986d8e0128e",
-    "amount": "50.0"
+    "amount": "50"
   },
   {
     "address": "0xd1921e87737238ded25f4f0b1137d6872de7268a",
-    "amount": "50.0"
+    "amount": "50"
   },
   {
     "address": "0x5e16834e449bf705e28ad8e30a04a74aedd1aad1",
-    "amount": "50.0"
+    "amount": "50"
   },
   {
     "address": "0xa7a2ae2f2bcf957f0a17cf2b853fa10789391a76",
@@ -2405,7 +2856,7 @@
   },
   {
     "address": "0x68b470738460a40d805add5e7918064d19ba51f4",
-    "amount": "44.0"
+    "amount": "44"
   },
   {
     "address": "0x68a2e6e4919a61beb120a4db5189e1ab4ba225b4",
@@ -2433,11 +2884,11 @@
   },
   {
     "address": "0x5db26b7f9fd08abfbfdc718754f16659c8e2495b",
-    "amount": "40.0"
+    "amount": "40"
   },
   {
     "address": "0x2847c186c7c8e5c8ac68aa21c768baf365a6cb36",
-    "amount": "40.0"
+    "amount": "40"
   },
   {
     "address": "0xbd4f93fbabb37605ca7da373be1ddd852e2b9095",
@@ -2449,7 +2900,14 @@
   },
   {
     "address": "0xa51ff889120e99851b7b3080e77ebfc6c810e5a5",
-    "amount": "38.463289"
+    "amount": "38.463289",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "38.463289"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x0b18575119afce35798c9d7003ddfcdca2f79ee7",
@@ -2461,7 +2919,26 @@
   },
   {
     "address": "0xcf42ad60ba11b24328c1c347c12220091b6757dc",
-    "amount": "34.321098"
+    "amount": "34.321098",
+    "distribute": [
+      {
+        "address": "0xa8544a463b8b84e08ca897f5a6307c6315212f58",
+        "amount": "34.321098"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
+  },
+  {
+    "address": "0x23b5aa437cfdaf03235d78961e032dba549dfc06",
+    "amount": "34.120397",
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "34.120397"
+      }
+    ],
+    "contract": true,
+    "remark": "这是FeeCollector合约里面的MUD，用于部署主网的燃料费"
   },
   {
     "address": "0x32bd2f007912604275123c2cf84befae3a2c6cc3",
@@ -2469,7 +2946,7 @@
   },
   {
     "address": "0xa0bdbe9a45cb65ee73c82d7d0246c66ece1d9194",
-    "amount": "34.0"
+    "amount": "34"
   },
   {
     "address": "0xee02f639ea5ce6401e08c6d312027298fc648877",
@@ -2493,7 +2970,14 @@
   },
   {
     "address": "0xdfe562ba35717e71742a8b16bf9fa5ac7f2c51eb",
-    "amount": "28.617857"
+    "amount": "28.617857",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "28.617857"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x9927164fc2f9943d29c12319d3d88aa0a91ff55a",
@@ -2541,7 +3025,7 @@
   },
   {
     "address": "0x84cb6a18aff3ee8d205b07c3effab4a3fa62b8a6",
-    "amount": "23.0"
+    "amount": "23"
   },
   {
     "address": "0x6203de0fa609a52bac35d978f6f512cfcc0cea6d",
@@ -2577,27 +3061,27 @@
   },
   {
     "address": "0x51b189b96dbf7aac773b3118e452a8ab96d10ccd",
-    "amount": "20.0"
+    "amount": "20"
   },
   {
     "address": "0x781aa6b173859ee2a3fb549aadf25448bcbd7bd3",
-    "amount": "20.0"
+    "amount": "20"
   },
   {
     "address": "0x310301cce8bd06f7614d2353dd0272189c7c6b10",
-    "amount": "20.0"
+    "amount": "20"
   },
   {
     "address": "0x9b023078df735437d96eefc0062127669f71a635",
-    "amount": "20.0"
+    "amount": "20"
   },
   {
     "address": "0x56b6d9042b9c88bd85c00f2db87ab2cfad926d69",
-    "amount": "20.0"
+    "amount": "20"
   },
   {
     "address": "0x4beb2b69ef01f80a49f638cd8216ffb13f6d6271",
-    "amount": "20.0"
+    "amount": "20"
   },
   {
     "address": "0xb24bddbccebe95d96089ca787e050aabca54515f",
@@ -2712,6 +3196,18 @@
     "amount": "14.254903"
   },
   {
+    "address": "0xf6eac236757e82d6772e8bd02d36a0c791d78c51",
+    "amount": "14",
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "14"
+      }
+    ],
+    "contract": true,
+    "remark": "这是MetaUserDAOToken合约里面的MUD，用于部署主网的燃料费"
+  },
+  {
     "address": "0xbb924c4166be06c069d4a7c923a9f62551c139f6",
     "amount": "13.671165"
   },
@@ -2745,7 +3241,7 @@
   },
   {
     "address": "0x1c014aeac6a803983c96e36dee69f66135498851",
-    "amount": "12.0"
+    "amount": "12"
   },
   {
     "address": "0xfa9089b5b6d330a56bc624700d0a305d1d45866e",
@@ -2773,7 +3269,14 @@
   },
   {
     "address": "0x7e2e93039c2c4e776518dd85eb05b4e5756dd75e",
-    "amount": "10.887076"
+    "amount": "10.887076",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "10.887076"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x1271caba4bf23f8fb31f97448605d65ee302ca51",
@@ -2785,7 +3288,14 @@
   },
   {
     "address": "0xcc9cfa3de32d1ce5318eb2f0c002e53ad522fbcb",
-    "amount": "10.28859"
+    "amount": "10.28859",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "10.28859"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xd413b2739213facd5723001c9601dc2127548938",
@@ -2793,59 +3303,94 @@
   },
   {
     "address": "0x663b83bb917deb38ee39d79787ae1a6eb08be207",
-    "amount": "10.0"
+    "amount": "10",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "10"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xacf9fae3a90d0e8f7cbd11fad9ad7fd5bf7e4db2",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0xd9aaa188a70c374e57a18fe5c3afd2145a336640",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0xa44c2d2345dd9d59889ae9695500953b6516328f",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0xb0b1384b970d406220035de868ff5bc0c4ffbbcd",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0x0326325d48bbf8fbfc01c30bbf8a919b147c362e",
-    "amount": "10.0"
+    "amount": "10",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "10"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x9a320e6ff22f756a5ea868c904aa84838813b7d9",
-    "amount": "10.0"
+    "amount": "10",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "10"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xd1bf6aa2363ea18ef59ab43bd6bdf8018bfb7bb6",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0x7f4726e5e617ebc2f55c4abd7b77c8a151c53374",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0x991290e2456f09e175b004b314c4566bb22d7ee8",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0x5c6d8f9653d2176dfbf5a121bf8f14fa1a5a7089",
-    "amount": "10.0"
+    "amount": "10",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "10"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xb042d098db3fdbf305849341a3fd1f16feaa936c",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0xc606cd59b6f9f6b04ca57632356306d24fc72609",
-    "amount": "10.0"
+    "amount": "10"
   },
   {
     "address": "0xf5bbf6a663fd2385ab16bb5ae789b85a796080e7",
-    "amount": "10.0"
+    "amount": "10",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "10"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x2d2fec9df888860fed6ae76e3051a069e2a4f7ac",
@@ -2865,11 +3410,25 @@
   },
   {
     "address": "0x768f4c28dfbb1cbae71a570326591180c4cc853e",
-    "amount": "9.176"
+    "amount": "9.176",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "9.176"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x7e285c72e9ded5f4add7708963a255d9855931f1",
-    "amount": "9.176"
+    "amount": "9.176",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "9.176"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xf0d25cebb577f27e2624458bcf45a333546d3bc7",
@@ -2877,11 +3436,18 @@
   },
   {
     "address": "0xfd1b85305493aa100195f9b100ed88541f89736b",
-    "amount": "9.0"
+    "amount": "9"
   },
   {
     "address": "0x95b57f820d48572c2689f923d4516e4661abf1f6",
-    "amount": "8.996"
+    "amount": "8.996",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "8.996"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x7418347f1e32af2199135bd1c4528167767aa220",
@@ -2893,11 +3459,25 @@
   },
   {
     "address": "0x527598fdb78a6683a5bcddc9ad3d44f879c8f6b7",
-    "amount": "8.78"
+    "amount": "8.78",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "8.78"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x2ec9b25bd697fee57b566261adb7a5866204ded5",
-    "amount": "8.78"
+    "amount": "8.78",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "8.78"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x9c32a9c8c53b67dbe2c06876eb74aaa05b1587fb",
@@ -2917,7 +3497,7 @@
   },
   {
     "address": "0x28c54e0497f0f1b80fd3757ee6ac106ed4471f7b",
-    "amount": "8.0"
+    "amount": "8"
   },
   {
     "address": "0x5eb54e5baf1614fd3b2fce262987666817d51e54",
@@ -2945,11 +3525,18 @@
   },
   {
     "address": "0x8594f8846a432ab22b3552eb1c84673a4c31baaa",
-    "amount": "7.0"
+    "amount": "7"
   },
   {
     "address": "0x206b3ceef4169f8072662702a39beea7e434fbf1",
-    "amount": "6.924"
+    "amount": "6.924",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "6.924"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x3bec3acd38d111d9594a3002d5e44d58d4bfdb2a",
@@ -3029,7 +3616,14 @@
   },
   {
     "address": "0xb0ae96553f49fa5df66c43e342cf393ea9d041d1",
-    "amount": "5.462"
+    "amount": "5.462",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "5.462"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x0bb7aceda33ec50dbda6bab9e9e77f3d356d400b",
@@ -3037,7 +3631,14 @@
   },
   {
     "address": "0x9219fba349b7c10c64dc0eee7f5d9427ad50e53d",
-    "amount": "5.371744"
+    "amount": "5.371744",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "5.371744"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x52cc439834967ebba54e29653a923edb9f897a82",
@@ -3057,7 +3658,14 @@
   },
   {
     "address": "0xe924911296f3ff3d72f245a383f93e100393cff1",
-    "amount": "5.188384"
+    "amount": "5.188384",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "5.188384"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x4e5d367d7fc081e14ce9f3b45b322ef6a941df71",
@@ -3069,19 +3677,19 @@
   },
   {
     "address": "0x713a62664f97d5c9bef390a092002aa7ef8c27ac",
-    "amount": "5.0"
+    "amount": "5"
   },
   {
     "address": "0x434d3379651dfd2f4b10a555322c06e41cd23402",
-    "amount": "5.0"
+    "amount": "5"
   },
   {
     "address": "0xccdc634ea87eee3158a3a8d5f3312a3d14c0d2b0",
-    "amount": "5.0"
+    "amount": "5"
   },
   {
     "address": "0xf4a0e5dafc435ec689d40789ef11fd89f522d56b",
-    "amount": "5.0"
+    "amount": "5"
   },
   {
     "address": "0x5a5739ed2423ea13a0742d6adefc195dc9d320e1",
@@ -3129,15 +3737,15 @@
   },
   {
     "address": "0x9b254298443d149e789ebcab0d201358feadb4af",
-    "amount": "4.0"
+    "amount": "4"
   },
   {
     "address": "0x6042a86624af5fd2f94ea9b9a6481ca19a08e34d",
-    "amount": "4.0"
+    "amount": "4"
   },
   {
     "address": "0x8025fdf3077bf109901a5e5dd6b7e5339f07f4fc",
-    "amount": "4.0"
+    "amount": "4"
   },
   {
     "address": "0x0f795f458879dff00b16cd469ef82431b21d8273",
@@ -3149,7 +3757,14 @@
   },
   {
     "address": "0xdddc192d29701fe741a19479b41f5462fbd4d6cc",
-    "amount": "3.78"
+    "amount": "3.78",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "3.78"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x9bfaf27ba34924ae8b13ad2d368b0cda73c58fc5",
@@ -3205,7 +3820,7 @@
   },
   {
     "address": "0x8f719458e83eaf48c691e2d65572c3a54ca722a5",
-    "amount": "3.0"
+    "amount": "3"
   },
   {
     "address": "0x0ce1f44cb2f96a2f35038fd752ad4445b8a8a0cc",
@@ -3213,7 +3828,14 @@
   },
   {
     "address": "0x48a8e1e22019fe4a035cb5752184a9d2778baf1b",
-    "amount": "2.96"
+    "amount": "2.96",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2.96"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x7512b576b4e520b1462cc89de14695b35612c48c",
@@ -3245,7 +3867,14 @@
   },
   {
     "address": "0x5f83282867b108414b405381c323561e72ab3057",
-    "amount": "2.461024"
+    "amount": "2.461024",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2.461024"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xa31edc4b5a5cf3c75329925c9345b8703bfe9e2f",
@@ -3253,7 +3882,14 @@
   },
   {
     "address": "0x9953bbccb4f706f2a700982470b0bd5e3a042269",
-    "amount": "2.379195"
+    "amount": "2.379195",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "2.379195"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x0dd9e87f354e4fbbd315ace8b40251d75c1051ba",
@@ -3313,39 +3949,39 @@
   },
   {
     "address": "0x70ff017eb30f02def1c3df87c9be697e15744426",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0xf39d097b685ef1a0433dadb67ab7f77ce84380e0",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0xbf2b9ff3acaef8f4a0a31fc9939bf14e2ca834a7",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0xea125a5cb81a74291047c6ec838b1ce8ad453fc0",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0xbbc2301ebe2436c1d1535bc880db560063751745",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0x1cd9cd8cbdcd30d7add5f3a548f64a6a2db11415",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0xb5fe98d77b66cbed865a5a85cfb3a9931292910d",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0xe8c2b214005c4904d1ef42529f5465c11c06edee",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0xd318748e6560558aabefadd65668bab9d66e1bf4",
-    "amount": "2.0"
+    "amount": "2"
   },
   {
     "address": "0x618d83b17f3223a0fd7b5df2d750de1cb37287e3",
@@ -3353,11 +3989,25 @@
   },
   {
     "address": "0xcf1a8a54858fa00a5e95cfcd56f87e57eb1856d2",
-    "amount": "1.970578"
+    "amount": "1.970578",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1.970578"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xfa1895fc1fcc60b2bb3559bf7053c622468e3c12",
-    "amount": "1.924"
+    "amount": "1.924",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1.924"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xdba62f10d226e20302d0897e726c9b9f99d8836e",
@@ -3517,7 +4167,14 @@
   },
   {
     "address": "0x6fbf31729bb0351749f428062e722e85ad9dd09d",
-    "amount": "1.176"
+    "amount": "1.176",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1.176"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x84872a0c37f354f70c64e211cea4b786dc4ecf80",
@@ -3601,199 +4258,220 @@
   },
   {
     "address": "0xc9f07a2d3dd4679d2f837bdc7e5d7f1434d0c974",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x83d3e37d2b048f761d6760d8e06e305603a104c6",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x73191ce71198f5a59bc03082113a16edcbbd9e85",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x76096b09e4c2581d28781936ee94ec84e4dd6662",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x52f7da1cf7cc052406ebcd56b6b14403164f14d2",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xaa3a50731960d0a650519ea10193b177340e5650",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x8820e3a40c8730f5d9ad390ed2e3caf0bfa2fe1d",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xd3c6a86a221bd8684975b265d6e430fdac09cfda",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x20794409e5cc786563c45aca0d15887905133488",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x418fe34ad63bed956127f38bf0470c2621fe1a96",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x7fde87bc1c87ba82007f79a7ca73112fdde9bbc3",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x6fdff8a8cb25cc99077f93ad16d0f5182abf7927",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x31d1fc3a48db31986dcad9b6c20df7c466baacd1",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xee5f65b17fdf88fe7e88b1d5eecb292224619a67",
-    "amount": "1.0"
+    "amount": "1",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xf192bcd00709747afa013606accea4696b4bf5bb",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x74835e4163eac8f6cc0e7fb94d8a48c3aef4bef7",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x36ffe44954cfe23c9f15622112c651c6f92f3bd6",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x67b41632a87056036e1c469c632f5f6987bcdb8b",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x9ce2257eba012860624efb6a50c28c1ec21a4038",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x2de5a24f9a5ac86f87c37ab5b0fdd7031e1015a3",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x3c2ae8d30f0fa6fdd5d44cd22d7aaf11f93ebafa",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x7b56c8a37837a53d3fcaf9e0d22a629d7dd33ee5",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x9bd8f7fa338781e26b6aeab70d727dea2546fb27",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xb7ba7024303c1f27b2006826df73b063d7ba3318",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x206f5c21b4c66b8c200fe81cfe39bf4a074cac2c",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x9def37c5a56b9b5c1fd1e692beb83c6d4a685bb7",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x3690035da6399e2e2f2872fd950f7609b5b35b33",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xc06eb1464bd4757820ae44f00cb4ede70b245b76",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x7e649fe187211dc25908fbb115fb76417663d7bc",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x79b8788793310b6060f4d97695766318250bbc1d",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xfcb272873fda56786ade536c313bf6965afdab5c",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x380ca084620aa324c0f55eb32f2b27cff186b7db",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x46cb0bdf74a8f8175ffbfc1631c40ebebd647689",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xafba3fa1593d16ffe66bb120dd8077f4701afbbb",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x2670b389cc4b1208a302b025a63f51ed848e48eb",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x93c4cb83a10fb331ff5f5be3e838ca507a842b01",
-    "amount": "1.0"
+    "amount": "1",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x764ff235e2bd93a6a1879ad587c9f319452438c7",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x107bc86887b08ad540d7cfaa7c7d94237bbf9212",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xbf044df5a53d62f29d88e04111fd83814fe6c117",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x62def3d9c0299932657171d5d29bb194a4907e40",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x55720bb883b8340edf2fd858a7e42a717bb2caf5",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x7d0a32c70972f6587663abdfc14fab27e50f6732",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x046cffe15c3760f6339f1e4b225062985a76b9c9",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xeac2edf56be389aa8ecdb73c6e5f22d7f668b09b",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x53c3542a88b020b410bdc80728091439aa674d75",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x91b9d9876e57335e38de764a1f2a044f6fe2f630",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0x7c793be05de6be72433a5c8986d058aa39ad7cb5",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xb2077b47778eb0255f2027acb5104652deacf0ba",
-    "amount": "1.0"
+    "amount": "1",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "1"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x56eddb7aa87536c09ccc2793473599fd21a8b17f",
-    "amount": "1.0"
+    "amount": "1"
   },
   {
     "address": "0xc60c5adfe73d1f222d5addc9f2ebe2597136bb28",
@@ -3877,7 +4555,14 @@
   },
   {
     "address": "0xc9d04a1e51ad3c08c65e54807f038e03f5364ca7",
-    "amount": "0.924"
+    "amount": "0.924",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.924"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x2524311887979abab51ee4b565ded83cc4b29943",
@@ -4093,7 +4778,14 @@
   },
   {
     "address": "0xff67a74115adc076d0b3513fbaae2369b3e475fa",
-    "amount": "0.7644"
+    "amount": "0.7644",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.7644"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x917dfe5a0c17a15470960426f432ccf091eeb141",
@@ -4216,6 +4908,18 @@
     "amount": "0.668443"
   },
   {
+    "address": "0xb01f8f528702d411d24c9bb8cc0e2fff779ec013",
+    "amount": "0.666869",
+    "distribute": [
+      {
+        "address": "0x0000000ba7906929d5629151777bc2321346828d",
+        "amount": "0.666869"
+      }
+    ],
+    "contract": true,
+    "remark": "这是一个未知合约里面的MUD，用于部署主网的燃料费"
+  },
+  {
     "address": "0xc2aa284355bb781cef8f0c9a51be1a511430acfe",
     "amount": "0.663328"
   },
@@ -4241,7 +4945,14 @@
   },
   {
     "address": "0xd270fc62c3ec640a51b426cf55b811875b9ed55a",
-    "amount": "0.636"
+    "amount": "0.636",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.636"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xcec1a5ff05b934081b79b6dfbc9f58c3c29900a2",
@@ -4645,7 +5356,14 @@
   },
   {
     "address": "0x47aaf14284e5d9f653032825787e289b1eaf9d51",
-    "amount": "0.360168"
+    "amount": "0.360168",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.360168"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x84666ea24b12b099d135fa0d400f523a1c781f6d",
@@ -4973,7 +5691,14 @@
   },
   {
     "address": "0xe7d0e26181b804dcee0fb9c92a17976fd3167ff5",
-    "amount": "0.176"
+    "amount": "0.176",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.176"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x08f63d31bc3bf1c60ecebea6a79009dca5fba6b6",
@@ -4981,7 +5706,14 @@
   },
   {
     "address": "0xd73a335c4e4e968b650520853cc2e3d426986ff4",
-    "amount": "0.170627"
+    "amount": "0.170627",
+    "distribute": [
+      {
+        "address": "0xd6dbfa31aa8bf4fb1ecc8308df89e9baaca4331e",
+        "amount": "0.170627"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x08e5a12408571a96133708e90592713745e0422b",
@@ -5053,7 +5785,14 @@
   },
   {
     "address": "0x5defb9b21c02e35bdff5f00910a44a188de64973",
-    "amount": "0.1382"
+    "amount": "0.1382",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.1382"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x6f135d78700f4bad6edf5a98e7f1e177e5881f1a",
@@ -5105,7 +5844,14 @@
   },
   {
     "address": "0x98f7dd9deccff80147e8992dba54019e74a926a9",
-    "amount": "0.111959"
+    "amount": "0.111959",
+    "distribute": [
+      {
+        "address": "0x75cf631a21ba70da1d17556e9c77968980456762",
+        "amount": "0.111959"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xce2ab51fab14ea45e7bef3d7046c660e971dddd9",
@@ -5197,7 +5943,14 @@
   },
   {
     "address": "0x6c8e13967da7d11120240359dd5409a2240ddff3",
-    "amount": "0.08408"
+    "amount": "0.08408",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.08408"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x243bc40d9d095090adf5ac9f7e8bb26f4423396c",
@@ -5477,7 +6230,14 @@
   },
   {
     "address": "0xe63d4fa1fd119049e9d6d038739f41a8b3a919a9",
-    "amount": "0.022646"
+    "amount": "0.022646",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.022646"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0x0473c6603849ddcaa1d2ca6ecc268b304943cc0a",
@@ -20360,7 +21120,7 @@
     "amount": "0.001"
   },
   {
-    "address": "0x0000000000000000000000000000000000000001",
+    "address": "0xeda45f08e445b1b4273898612b9bbd094ef23c19",
     "amount": "0.001"
   },
   {
@@ -20480,7 +21240,7 @@
     "amount": "0.001"
   },
   {
-    "address": "0x0000000000000000000000000000000000000001",
+    "address": "0xbdb1f355149c2eddb8c1c473c75ed41f093dda9d",
     "amount": "0.001"
   },
   {
@@ -20548,7 +21308,7 @@
     "amount": "0.001"
   },
   {
-    "address": "0x0000000000000000000000000000000000000001",
+    "address": "0x71993e860e864c2e6af7573ba0250076140e8bf9",
     "amount": "0.001"
   },
   {
@@ -20672,7 +21432,7 @@
     "amount": "0.001"
   },
   {
-    "address": "0x0000000000000000000000000000000000000002",
+    "address": "0x1b30d48cf675004ded431ad90ad37e5a9ed145b8",
     "amount": "0.001"
   },
   {
@@ -20756,7 +21516,7 @@
     "amount": "0.001"
   },
   {
-    "address": "0x0000000000000000000000000000000000000003",
+    "address": "0x42db9e0d6112121ce379a80e671d966a79520f04",
     "amount": "0.001"
   },
   {
@@ -20920,7 +21680,7 @@
     "amount": "0.001"
   },
   {
-    "address": "0x0000000000000000000000000000000000000003",
+    "address": "0x0f32c99b79474140fb92599baec3830b2f97b724",
     "amount": "0.001"
   },
   {
@@ -22649,7 +23409,14 @@
   },
   {
     "address": "0x44d5377dc35c28e97bfecfa9aad17df4c796609e",
-    "amount": "0.000175"
+    "amount": "0.000175",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "0.000175"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xef998384a099cfa0f541c435f8106e1ed6aba2f8",
