@@ -4475,14 +4475,7 @@
   },
   {
     "address": "0xc60c5adfe73d1f222d5addc9f2ebe2597136bb28",
-    "amount": "0.99",
-    "distribute": [
-      {
-        "address": "0xd215ca90da4f5eb00b60b45c108802b83ee15921",
-        "amount": "0.99"
-      }
-    ],
-    "remark": "这是替换的私钥地址"
+    "amount": "0.99"
   },
   {
     "address": "0xf63b2ab63590e11d868e2b4bc5789d6284b63da9",
