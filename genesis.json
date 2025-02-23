@@ -1,5 +1,5 @@
 {
-  "genesis_time": "2025-02-23T03:05:18.069687797Z",
+  "genesis_time": "2025-02-23T07:18:05.166175081Z",
   "chain_id": "mud_168169-1",
   "initial_height": "1",
   "consensus_params": {
@@ -41,7 +41,7 @@
         {
           "@type": "/ethermint.types.v1.EthAccount",
           "base_account": {
-            "address": "mud1rp7hy08tr0vyk8sh4mxz4tw2yxmprw3m93jqqt",
+            "address": "mud1d96sca2d079p00mhz7hhfzx0cgv9tkrr4rpkzl",
             "pub_key": null,
             "account_number": "0",
             "sequence": "0"
@@ -47940,7 +47940,7 @@
       },
       "balances": [
         {
-          "address": "mud1rp7hy08tr0vyk8sh4mxz4tw2yxmprw3m93jqqt",
+          "address": "mud1d96sca2d079p00mhz7hhfzx0cgv9tkrr4rpkzl",
           "coins": [
             {
               "denom": "amud",
@@ -109655,11 +109655,11 @@
                   "max_change_rate": "0.100000000000000000"
                 },
                 "min_self_delegation": "1",
-                "delegator_address": "mud1rp7hy08tr0vyk8sh4mxz4tw2yxmprw3m93jqqt",
-                "validator_address": "mudvaloper1rp7hy08tr0vyk8sh4mxz4tw2yxmprw3m7k3ax0",
+                "delegator_address": "mud1d96sca2d079p00mhz7hhfzx0cgv9tkrr4rpkzl",
+                "validator_address": "mudvaloper1d96sca2d079p00mhz7hhfzx0cgv9tkrrwyztym",
                 "pubkey": {
                   "@type": "/cosmos.crypto.ed25519.PubKey",
-                  "key": "/KPsF4O6IGspSC180mzISkFhp1Ua22mE6qkvbYI5zW4="
+                  "key": "YV57zmPqUJDMYB+DIXHjkpgxoohhZCIVrZe7uF23734="
                 },
                 "value": {
                   "denom": "amud",
@@ -109667,7 +109667,7 @@
                 }
               }
             ],
-            "memo": "279d30c4b5801b5701576bab47a556e3e08a1de8@192.168.0.1:26656",
+            "memo": "0c6f0c9f9e98eb9cbc702b4773423e138fc2ef46@192.168.0.1:26656",
             "timeout_height": "0",
             "extension_options": [],
             "non_critical_extension_options": []
@@ -109677,7 +109677,7 @@
               {
                 "public_key": {
                   "@type": "/ethermint.crypto.v1.ethsecp256k1.PubKey",
-                  "key": "A7Rf9q9TDs+mQfFaT160cCufaTkKXtakQw8u9+n83wPV"
+                  "key": "Ar9UDWrc/QKVNzfXhPbGGEd1STdMjngKDIGH0e88K5Dx"
                 },
                 "mode_info": {
                   "single": {
@@ -109696,7 +109696,7 @@
             "tip": null
           },
           "signatures": [
-            "R69FwpriSx4BDYMgzYYoOaPaGD3VSONBI9G+qiRRbC97qAehuwnEBvmnvWfgbuIadZISl9iFKcqU1caAT7Gr+wE="
+            "Yb6MGVvpJR7iZFSxQk6eTP1U7jx/fHsLdnT8rFKGv3gRxdD4QtOzeGT12LCp//0IJiZy7olJKACCKC5By2rwBgA="
           ]
         }
       ]
