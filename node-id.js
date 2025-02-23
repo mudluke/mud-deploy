@@ -17,7 +17,7 @@ export const privKeyToBurrowAddres = (privKey, isBase64 = true) => {
 export const main = async () => {
   const ip = await execPromis('curl -4 ifconfig.me');
 
-  const path = '/Users/lcq/Code/mud/mud/deploy/nodes/node0/mudd/config/node_key.json';
+  const path = '/root/chain-data/mud/config/node_key.json';
   const nodeKey = await fs.readJson(path);
   const address = privKeyToBurrowAddres(nodeKey.priv_key.value);
 
