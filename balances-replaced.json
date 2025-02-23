@@ -128,14 +128,7 @@
   },
   {
     "address": "0x28741df43387f7bd7707ba0415731a7e93b4a784",
-    "amount": "48822.911349",
-    "distribute": [
-      {
-        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
-        "amount": "48822.911349"
-      }
-    ],
-    "remark": "这是替换的私钥地址"
+    "amount": "48822.911349"
   },
   {
     "address": "0x4f0cece6b608c1a51b5b0a73194b973de3e40d48",
@@ -3517,7 +3510,14 @@
   },
   {
     "address": "0x851ca15b07eaf2bf514ff1648d7cde40926d3762",
-    "amount": "7.161678"
+    "amount": "7.161678",
+    "distribute": [
+      {
+        "address": "0x3fac87af792de855cb4ee647a798b837661f7e9d",
+        "amount": "7.161678"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xad3b67bca8935cb510c8d18bd45f0b94f54a968f",
@@ -4475,7 +4475,14 @@
   },
   {
     "address": "0xc60c5adfe73d1f222d5addc9f2ebe2597136bb28",
-    "amount": "0.99"
+    "amount": "0.99",
+    "distribute": [
+      {
+        "address": "0xd215ca90da4f5eb00b60b45c108802b83ee15921",
+        "amount": "0.99"
+      }
+    ],
+    "remark": "这是替换的私钥地址"
   },
   {
     "address": "0xf63b2ab63590e11d868e2b4bc5789d6284b63da9",
@@ -5847,7 +5854,7 @@
     "amount": "0.111959",
     "distribute": [
       {
-        "address": "0x75cf631a21ba70da1d17556e9c77968980456762",
+        "address": "0xd146728d18b85c905131769da8dbe3a627aac4e9",
         "amount": "0.111959"
       }
     ],
