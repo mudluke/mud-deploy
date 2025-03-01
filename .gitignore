@@ -10,3 +10,4 @@ mud/
 mudd
 package-lock.json
 holders.json
+chain.json
