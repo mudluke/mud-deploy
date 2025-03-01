@@ -44,9 +44,13 @@ export const main = async () => {
 
     // input params
 
-    const privateKey = '54a2d3ac86cd0ce2c3af91a930d9a77199c658edf9af8341991e3622f2d9b521';
+    const [name, privateKey] = fs.readFileSync('node').toString().split(' ');
+    if (!name || !privateKey) {
+      console.log('node file is not found');
+      return;
+    }
     const wallet = new ethers.Wallet(privateKey, provider);
-    const description = ['join node', '', 'https://mud.network', '', ''];
+    const description = [name, '', 'https://mud.network', '', ''];
     const commission = ['100000000000000000', '200000000000000000', '100000000000000000'];
     const minSelfDelegation = '1';
     const pubkey = key;
@@ -54,89 +58,7 @@ export const main = async () => {
 
     const stakingAddress = '0x0000000000000000000000000000000000001003';
     const abi = [
-      {
-        inputs: [
-          {
-            components: [
-              {
-                internalType: 'string',
-                name: 'moniker',
-                type: 'string',
-              },
-              {
-                internalType: 'string',
-                name: 'identity',
-                type: 'string',
-              },
-              {
-                internalType: 'string',
-                name: 'website',
-                type: 'string',
-              },
-              {
-                internalType: 'string',
-                name: 'securityContact',
-                type: 'string',
-              },
-              {
-                internalType: 'string',
-                name: 'details',
-                type: 'string',
-              },
-            ],
-            internalType: 'struct Description',
-            name: 'description',
-            type: 'tuple',
-          },
-          {
-            components: [
-              {
-                internalType: 'uint256',
-                name: 'rate',
-                type: 'uint256',
-              },
-              {
-                internalType: 'uint256',
-                name: 'maxRate',
-                type: 'uint256',
-              },
-              {
-                internalType: 'uint256',
-                name: 'maxChangeRate',
-                type: 'uint256',
-              },
-            ],
-            internalType: 'struct CommissionRates',
-            name: 'commission',
-            type: 'tuple',
-          },
-          {
-            internalType: 'uint256',
-            name: 'minSelfDelegation',
-            type: 'uint256',
-          },
-          {
-            internalType: 'string',
-            name: 'pubkey',
-            type: 'string',
-          },
-          {
-            internalType: 'uint256',
-            name: 'value',
-            type: 'uint256',
-          },
-        ],
-        name: 'createValidator',
-        outputs: [
-          {
-            internalType: 'bool',
-            name: 'success',
-            type: 'bool',
-          },
-        ],
-        stateMutability: 'nonpayable',
-        type: 'function',
-      },
+      'function createValidator((string,string,string,string,string) description, (uint256,uint256,uint256) commission, uint256 minSelfDelegation, string pubkey, uint256 value) returns (bool success)',
     ];
     const staking = new ethers.Contract(stakingAddress, abi, wallet);
     const tx = await staking.createValidator(description, commission, minSelfDelegation, pubkey, value);
