@@ -10,6 +10,9 @@ export const privKeyToBurrowAddres = (privKey, isBase64 = true) => {
     privKey = Buffer.from(privKey, 'base64').toString('hex');
   }
   const publicKey = privKey.substring(64, 128);
+  // 同时输出base64
+  console.log('publicKey hex:', publicKey);
+  console.log('publicKey base64:', Buffer.from(publicKey, 'hex').toString('base64'));
   const digest = crypto.createHash('sha256').update(Buffer.from(publicKey, 'hex')).digest('hex');
   return digest.toLowerCase().substring(0, 40);
 };
