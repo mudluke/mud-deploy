@@ -44,7 +44,7 @@ export const main = async () => {
 
     // input params
 
-    const [name, privateKey] = fs.readFileSync('node').toString().split(' ');
+    const [name, privateKey] = fs.readFileSync('node').toString().trim().split(' ');
     if (!name || !privateKey) {
       console.log('node file is not found');
       return;
