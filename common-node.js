@@ -213,7 +213,7 @@ const main = async function () {
     const startPath = path.join(dataDir, 'start.sh');
     const stopPath = path.join(dataDir, 'stop.sh');
     const startShell = `#!/bin/bash
-nohup ./mudd start --home ./mud >./mud.log 2>&1 &`;
+nohup ./mudd start --log_level warn --home ./mud >./mud.log 2>&1 &`;
     await fs.writeFile(startPath, startShell);
     const stopShell = `#!/bin/bash
 pid=\`lsof -iTCP:${tendermint.port['p2p.laddr']} -sTCP:LISTEN -t\`;
